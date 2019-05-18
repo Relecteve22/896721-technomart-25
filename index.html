@@ -6,9 +6,13 @@
   </head>
   <body>
     <header class="main-header">
-      <a><img src="img/logo.svg" alt="Логотип Техномарт"></a>
+      <a>
+        <img src="img/logo.svg" alt="Логотип Техномарт">
+      </a>
        <p>
-        <!--Форма поиска-->
+        <form action="https://echo.htmlacademy.ru" method="get">
+          <input class="search" type="search" name="search" aria-label="Поиск"  placeholder="Поиск:">
+        </form>
         <span class="bookmarks"><a href="bookmarks.html">Закладки: 0</a></span>
         <span class="basket"><a href="basket.html">Корзина: 0</a></span>
         <span class="checkout"><a href="checkout.html">Оформить заказ</a></span>
@@ -45,7 +49,7 @@
         <li>
           <a href="catalog.html">
             <span>Инструменты</span>
-            <span>>На все случаи</span>
+            <span>На все случаи</span>
           </a>
         </li>
         <li>
@@ -191,9 +195,9 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
           <ul>
-            <li class="choose-service">Доставка</li>
-            <li class="service">Гарантия</li>
-            <li class="service">Кредит</li>
+            <li class="choose-service"><button type="button">Доставка</button></li>
+            <li class="service"><button type="button">Гарантия</button></li>
+            <li class="service"><button type="button">Кредит</button></li>
           </ul>
           <div class="service-delivery">
             <h3>Доставка</h3>
@@ -218,7 +222,9 @@
             <p>Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.
             </p>
-            <!--Здесь будет кнопка-->
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <button type="submit" name="submit-request">Отправить заявку</button>
+            </form>
           </div>
         </section>
       <section class="about-company">
@@ -244,9 +250,8 @@
           заехав в наш офис:
         </p>
         <!--Здесь будет интерактивная карта-->
-          <img src="map.png" alt="Карта" width="300" height="158">
-        <!--Здесь будет интерактивная карта-->
-        <!--Здесь будет форма-->
+          <img src="img/map.png" alt="Карта г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="300" height="158">
+          <button type="button" name="open-post" id="open-post">Заблудились? Напишите нам!</button>
       </section>
     </main>
     <footer class="main-footer">
@@ -287,5 +292,20 @@
             <a href="https://htmlacademy.ru">HTML Academy</a>
           </p>
     </footer>
+    <div class="write-us"> 
+      <form action="https://echo.htmlacademy.ru" method="get">
+        <p>
+          <label for="name-surname">Ваше имя:</label><br>
+          <input type="text" placeholder="Имя Фамилия" name="name-surname" id="name-surname" required>
+        </p>
+        <p>
+          <label for="email">Ваш e-mail:</label><br>
+          <input type="email" placeholder="email@example.com" name="email" id="email" required>
+        </p>
+        <label for="taxt-post">Текст письма</label><br>
+        <textarea placeholder="В свободной форме" name="text-post" id="text-post" required></textarea><br>
+        <button type="submit" name="post">Отправить</button>
+      </form>
+    </div>
   </body>
 </html>
