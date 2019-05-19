@@ -53,55 +53,57 @@
         <li class="candlelight-false"><a href=#>По типу</a></li>
         <li class="candlelight-false"><a href=#>По функционалу</a></li>
       </ul>
-      <section class="filtr">
+      <section class="filter">
         <form action="https://echo.htmlacademy.ru" method="get">
-        <fieldset>
-          
-          <legend>Цена:</legend>
-          <!-- Я могу эту штуку сделать? Или это будет дальше?
-            <input type="range" name="price" id="price"> -->
-        </fieldset>
-        <fieldset>
-          <legend>Производители:</legend>
-          <ul>
-            <li>
-              <input type="checkbox" name="bosch" id="filter-bosch" checked> 
-              <label for="filter-bosch">Bosch</label> 
-            </li>
-            <li>
-              <input type="checkbox" name="interskoll" id="filtr-interskol">
-              <label for="filtr-interskol">Интерскол</label>
-            </li>
-            <li>
-              <input type="checkbox" name="makita" id="filtr-makita" checked>
-              <label for="filtr-makita">Makita</label>
-            </li>
-            <li>
-              <input type="checkbox" name="dewalt" id="filtr-dewalt">
-              <label for="filtr-dewalt">DeWalt</label>
-            </li>
-            <li>
-              <input type="checkbox" name="hitachi" id="filtr-hitachi">
-              <label for="filtr-hitachi">Hitachi</label>
-            </li>
-          </ul>
-        </fieldset>
-        <fieldset>
-          <legend>Питание:</legend>
-          <ul>
-            <li>
-              <input type="radio" name="product-group" id="battery
-              " checked>
-              <label for="battery">Аккумуляторные</label>
-            </li>
-            <li>
-              <input type="radio" name="product-group" id="network">
-              <label for="network">Сетевые</label>
-            </li>
-          </ul>
-        
-        </fieldset>
-        <button type="submit">Показать</button>
+          <fieldset>
+            <legend>Цена:</legend>
+            <div class="half-width output-area">
+              <output name="ratingoutput">0</output>
+            </div>
+            <div class="half-width output-area">
+              <output name="ratingoutput">30000</output>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Производители:</legend>
+            <ul>
+              <li>
+                <input type="checkbox" name="bosch" id="filter-bosch" checked> 
+                <label for="filter-bosch">Bosch</label> 
+              </li>
+              <li>
+                <input type="checkbox" name="interskoll" id="filter-interskol">
+                <label for="filter-interskol">Интерскол</label>
+              </li>
+              <li>
+                <input type="checkbox" name="makita" id="filter-makita" checked>
+                <label for="filter-makita">Makita</label>
+              </li>
+              <li>
+                <input type="checkbox" name="dewalt" id="filter-dewalt">
+                <label for="filter-dewalt">DeWalt</label>
+              </li>
+              <li>
+                <input type="checkbox" name="hitachi" id="filter-hitachi">
+                <label for="filter-hitachi">Hitachi</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset>
+            <legend>Питание:</legend>
+            <ul>
+              <li>
+                <input type="radio" name="product-group" id="battery
+                " checked>
+                <label for="battery">Аккумуляторные</label>
+              </li>
+              <li>
+                <input type="radio" name="product-group" id="network">
+                <label for="network">Сетевые</label>
+              </li>
+            </ul> 
+          </fieldset>
+          <button type="submit">Показать</button>
         </form>
       </section>
       <section class="catalog-item">
@@ -291,36 +293,42 @@
           <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span><br>
           <span><a href="tel:+78125550555">+7(812)555-05-55</a></span>
         </p>      
-          <ul class="footer-nav-top">
-            <li><a href="company.html">Компания</a></li>
-            <li><a href="news.html">Новости</a></li> 
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="delivery.html">Доставка</a></li>
-            <li><a href="contants.html">Контакты</a></li>
-          </ul>
-          <ul class="footer-nav-bottom">
-            <li><a href="catalog-material.html">Материалы</a></li> 
-            <li><a href="catalog-equipment.html">Техника</a></li>
-            <li><a href="catalog-tool.html">Инструмент</a></li>
-            <li><a href="special-offers.html">Спецпредложения</a></li>
-          </ul>
-          <p>
-            <span>© 2010–2019 Компания «Техномарт»</span><br>
-            <span>Все права защищены</span>
-          </p>
-              <ul class="footer-social">
-                <li><a class="social-button" href="vk.com">Вконтакте</a></li>
-                <li><a class="social-button" href="facebook.com">Фейсбук</a></li>
-                <li><a class="social-button" href="instagram.com">Инстаграм</a></li>
-              </ul>
-            <p class="footer-connection">
-              <span>Обратная связь:</span><br>
-              <a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </p>
-            <p class="footer-copyright">
-              <span>Разработано:</span> <br>
-              <a href="https://htmlacademy.ru">HTML Academy</a>
-            </p>
+        <ul class="footer-nav-top">
+          <li><a href="company.html">Компания</a></li>
+          <li><a href="news.html">Новости</a></li> 
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="contants.html">Контакты</a></li>
+        </ul>
+        <ul class="footer-nav-bottom">
+          <li><a href="catalog-material.html">Материалы</a></li> 
+          <li><a href="catalog-equipment.html">Техника</a></li>
+          <li><a href="catalog-tool.html">Инструмент</a></li>
+          <li><a href="special-offers.html">Спецпредложения</a></li>
+        </ul>
+        <p>
+          <span>© 2010–2019 Компания «Техномарт»</span><br>
+          <span>Все права защищены</span>
+        </p>
+        <ul class="footer-social">
+          <li><a class="social-button" href="vk.com">Вконтакте</a></li>
+          <li><a class="social-button" href="facebook.com">Фейсбук</a></li>
+          <li><a class="social-button" href="instagram.com">Инстаграм</a></li>
+        </ul>
+        <p class="footer-connection">
+          <span>Обратная связь:</span><br>
+          <a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </p>
+        <p class="footer-copyright">
+          <span>Разработано:</span> <br>
+          <a href="https://htmlacademy.ru">HTML Academy</a>
+        </p>
       </footer>
+      <div class="menu-item-added-to-cart">
+        <span class="item-added-to-cart">Товар добавлен в корзину!</span>
+        <a href="Checkout">Оформить заказ</a>
+        <a href="continue-shopping">Продолжить покупки</a>
+        <button type="button" class="leave" aria-label="Закрыть"><span class="visually-hidden">Закрыть форму</span></button>
+      </div>
   </body>
 </html>
