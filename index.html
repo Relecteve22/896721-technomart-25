@@ -222,9 +222,7 @@
             <p>Залезть в долговую яму стало проще!<br>
                 Кредитные консультанты придут вам на помощь.
             </p>
-            <form action="https://echo.htmlacademy.ru" method="get">
-              <button type="submit" name="submit-request">Отправить заявку</button>
-            </form>
+              <a href="request.html">Отправить заявку</a>
           </div>
         </section>
       <section class="about-company">
@@ -293,7 +291,7 @@
           </p>
     </footer>
     <div class="write-us"> 
-      <form action="https://echo.htmlacademy.ru" method="get">
+      <form action="https://echo.htmlacademy.ru" method="POST">
         <p>
           <label for="name-surname">Ваше имя:</label><br>
           <input type="text" placeholder="Имя Фамилия" name="name-surname" id="name-surname" required>
@@ -306,6 +304,11 @@
         <textarea placeholder="В свободной форме" name="text-post" id="text-post" required></textarea><br>
         <button type="submit" name="post">Отправить</button>
       </form>
+      <button type="button" class="leave" aria-label="Закрыть"><span class="visually-hidden">Закрыть форму</span></button>
+    </div>
+    <div class="main-map">
+      <button type="button" class="leave" aria-label="Закрыть"><span class="visually-hidden">Закрыть форму</span></button>
+      <!--Здесь будет карта-->
     </div>
   </body>
 </html>
