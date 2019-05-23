@@ -133,7 +133,7 @@
   .middle-nav a:focus {
     background-color: rgba(0, 0, 0, 0.3);
   }
-  /* Слайдер 1 */
+  
   .middle-nav li:nth-child(1) {
       background-color: #ffbf47;
   }
@@ -236,6 +236,7 @@
     font-size: 30px;
     line-height: 30px;
   }
+  /* --------- */
   .bg-popular-items a {
       background-color: #ee3643;
       color: #fff;
@@ -243,11 +244,14 @@
   .bg-popular-items {
       background-color: #f9f5f0;
   }
-  .catalog-item {
+  
+   .mini-catalog-item li {
       border: 1px solid #eaeaea;
       width: 218px;
       height: 316px;
   }
+  
+  
   .catalog-item h3 {
     font-family: "PT Sans", Arial, sans-serif;
     font-weight: bold;
@@ -285,6 +289,7 @@
     font-family: "Cuprum", Arial sans-serif;
     color: #000;
   }
+  /* ------------ */
   .catalog-service p {
     color: #000;
     font-size: 13px;
@@ -567,6 +572,11 @@
       width: 95px;
       height: 38px;
     }
+    .about-perforators {
+      background-color: #f2f6f8;
+      width: 1200px;
+      height: 261px;
+    }
     .about-perforators h2  {
       font-size: 30px;
       line-height: 30px;
@@ -578,8 +588,18 @@
       line-height: 24px;
       font-family: "PT Sans", Arial, sans-serif;
     }
-
-  
+  .pagination-item a {
+    font-size: 13px;
+    line-height: 18px;
+    color: #000;
+    border: 1px solid #f2f2f2;
+  }
+  .pagination-item a:hover {
+    border: 1px solid #bdc6ca;
+  }
+  .pagination-item a:focus {
+    border: 1px solid #ee3744;
+  }
   
   
   
