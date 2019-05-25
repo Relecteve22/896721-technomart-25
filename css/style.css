@@ -2,12 +2,11 @@
     margin: 0;
     padding: 0;
 
-    font-family: "Cuprum", Arial sans-serif;
+    font-family: "Cuprum", Arial, sans-serif;
     font-size: 17px;
     line-height: 18px;
-    font-weight: 400px;
+    font-weight: 400;
     color: #fff;
-    text-transform: uppercase;
 
     background-color: #fff;
   }
@@ -17,27 +16,40 @@
    .index-header {
     background-color: #293449;
   }
-  .main-header img {
+  .logo {
     background-color: #ee3643;
     text-align: center;
   }
-  .main-header img:hover {
+  .logo:hover {
     background-color: #ca2c37;
   }
-  .main-header img:focus {
+  .logo:focus {
+    background-color: #ca2c37;  
+  }
+  .logo:active {
     background-color: #ba2732;
   }
-  .index-header input[type="search"] {
+  .header-search {
     border: none;
     background-color: #293449;
+    color: #fff;
   }
-  .index-header input[type="search"]::placeholder {
+  .header-search::-webkit-input-placeholder {
      color: #fff;
   }
-  .index-header input[type="search"]:hover {
+  .header-search:-ms-input-placeholder { 
+    color: #fff; 
+  }
+  .header-search::-ms-input-placeholder { 
+    color: #fff; 
+  }
+  .header-search::placeholder {
+    color: #fff;
+  } 
+  .header-search:hover {
     background-color: #212a3a;
   }
-  .index-header input[type="search"]:focus {
+  .header-search:focus {
     background-color: #fff;
     color: #000;
   }
@@ -48,12 +60,18 @@
     background-color: #212a3a;
   }
   .bookmarks a:focus {
+    background-color: #212a3a;
+  }
+  .bookmarks a:active {
     background-color: #161d29;
   }
   .basket a:hover {
     background-color: #212a3a;
   }
   .basket a:focus {
+    background-color: #212a3a;
+  }
+  .basket a:active {
     background-color: #161d29;
   }
   .checkout {
@@ -78,6 +96,7 @@
     line-height: 21px;
   }
   .address-small {
+      font-style: normal;
       font-size: 14px;
       color: #32425c;
   }
@@ -85,6 +104,7 @@
       list-style: none;
   }
   .join-reg a {
+    font-size: 21px;
     color: #000;
     background-color: #fff;
   }
@@ -114,12 +134,11 @@
     background-color:#1d2739;
   }
   /* Общие стили для слайдов */
-  .middle-nav span:nth-child(1) {
-    font-style: 700;
+  .card span:nth-child(1) {
     font-weight: bold;
     font-size: 24px;
   }
-  .middle-nav a {
+  .card a {
     color: #fff;
     font-style: 700;
     font-weight: bold;
@@ -127,20 +146,20 @@
     background-color: rgba(0, 0, 0, 0.1);
     text-align: center;
   }
-  .middle-nav a:hover {
+  .card a:hover {
     background-color: rgba(0, 0, 0, 0.2);
   }
-  .middle-nav a:focus {
+  .card a:focus {
     background-color: rgba(0, 0, 0, 0.3);
   }
   
-  .middle-nav li:nth-child(1) {
-      background-color: #ffbf47;
+  .materials {
+    background-color: #ffbf47;
   }
-  .middle-nav li:nth-child(2) {
+  .instruments {
     background-color: #3bbce3;
   }
-  .middle-nav li:nth-child(3) {
+  .equipment {
     background-color: #dc91d8;
   }
 
@@ -148,58 +167,35 @@
     background-color: #1a0f0d;
     background-image: url("img/slider1.jpg");
   }
-  .slaider-1 span {
-    font-size: 36px;
-    line-height: 36px;
-    font-style: 700px;
-  }
-  .slaider-1 p {
-    font-size: 18px;
-    line-height: 24px;
-  }
-  .slaider-1 a {
-    background-color: #ee3643;
-    color: #fff;
-    font-size: 14px;
-    line-height: 18px;
-  }
-  .slaider-1 a:hover {
-    background-color: #ca2c37;
-  }
-  .slaider-1 a:focus {
-    background-color: #ba2732; 
-  }
-
   .slaider-2 {
     background-color: #1a0f0d;
     background-image: url("img/slider.jpg");
   }
-  .slaider-2 span {
+  .slider span {
     font-size: 36px;
     line-height: 36px;
     font-style: 700px;
   }
-  .slaider-2 p {
+  .slider p {
     font-size: 18px;
     line-height: 24px;
   }
-  .slaider-2 a {
+  .slider a {
     background-color: #ee3643;
     color: #fff;
     font-size: 14px;
     line-height: 18px;
   }
-  .slaider-2 a:hover {
+  .slider a:hover {
     background-color: #ca2c37;
   }
-  .slaider-2 a:focus {
+  .slider a:focus {
     background-color: #ba2732; 
   }
-
-  .middle-nav li:nth-child(6) {
+  .discount {
     background-color: #8ed78f;
    }
-  .middle-nav li:nth-child(7) {
+  .delivery {
     background-color: #ffc047;
   }
   .buy a {
@@ -272,7 +268,7 @@
     font-weight: bold;
     color: #fff;
     background-color: #ee3643;
-    vertical-align: center;
+    text-align: center;
   }
   .mini-catalog-manufactures li {
       border: 1px solid #eaeaea;
@@ -286,10 +282,9 @@
   .catalog-service h2 {
     font-size: 30px;
     line-height: 30px;
-    font-family: "Cuprum", Arial sans-serif;
+    font-family: "Cuprum", Arial, sans-serif;
     color: #000;
   }
-  /* ------------ */
   .catalog-service p {
     color: #000;
     font-size: 13px;
@@ -300,7 +295,7 @@
     font-size: 21px;
     line-height: 30px; 
     font-weight: bold;
-    font-family: "Cuprum", Arial sans-serif;
+    font-family: "Cuprum", Arial, sans-serif;
     background-color: #32425c;
     border: none;
     color: #fff;
@@ -326,7 +321,7 @@
   .catalog-service h3 {
       color: #32425c;
       font-size: 36px;
-      line-height: 24px;
+      line-height: 36px;
   }
   .middle-nav li {
       list-style: none;
@@ -357,7 +352,7 @@
     color: #000;
   }
   .contants h2 {
-    font-family: "Cuprum", Arial sans-serif;
+    font-family: "Cuprum", Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
   }
@@ -369,7 +364,7 @@
   .contants button[type="button"] {
     font-size: 14px;
     line-height: 18px; 
-    font-family: "Cuprum", Arial sans-serif;
+    font-family: "Cuprum", Arial, sans-serif;
     background-color: #ee3643;
     border: none;
     color: #fff;
@@ -439,7 +434,7 @@
   .footer-connection a {
     color: #ffd180;
     line-height: 24px;
-    font-size: 18px;
+    font-size: 16px;
   }
   .footer-connection a:hover {
     text-decoration: underline;
@@ -553,7 +548,7 @@
   .filter legend {
     line-height: 30px;
     font-size: 17px;
-    font-weight: 700;
+    font-weight: bold;
   }
   .filter fieldset {
     border: none;
