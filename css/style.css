@@ -633,13 +633,13 @@
     background-repeat: no-repeat;
   } 
   body > * {
-    background-color: rgba(255, 0, 0, 0.4);
+    background-color: rgba(255, 0, 0, 0.3);
   }
   body > * > * {
-    background-color: rgba(255, 0, 234, 0.4);  
+    background-color: rgba(255, 0, 234, 0.5);  
   }
   body > * > * > * {
-    background-color: rgba(43, 255, 0, 0.4);
+    background-color: rgba(43, 255, 0, 0.6);
   }
   /*-------Временно ------- */
   .main-header {
@@ -650,14 +650,16 @@
     min-height: 320px;
   }
   .index-header {
+  width: auto;
 
   /* Временно для сетки */    
   min-height: 42px;
   }
-  .logo {
+  .main-header-logo {
   width: 220px;  
 
   /* Временно для сетки */    
-  min-height: 47;    
+  min-height: 47px;    
+  display: block;  
   }
 
