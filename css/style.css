@@ -620,32 +620,44 @@
     display: none; 
   } */
 /* -------Для сетки------- */
-/*  -------Временно ------- */ 
-html,
-body {
-  min-width: 1200px;
-  min-height: 3151px;
-}
+/*-------Временно ------- */ 
+  html,
   body {
-  background-image: url("../img/technomart-index.jpg");
-  background-size: 1200px auto;
-  background-position: top center;
-  background-repeat: no-repeat;
+    min-width: 1200px;
+    min-height: 3151px;
+  }
+  body {
+    background-image: url("../img/technomart-index.jpg");
+    background-size: 1200px auto;
+    background-position: top center;
+    background-repeat: no-repeat;
   } 
   body > * {
-    background-color: rgba(255, 0, 0, 0.3);
+    background-color: rgba(255, 0, 0, 0.4);
   }
   body > * > * {
-    background-color: rgba(255, 255, 0, 0.3);  
+    background-color: rgba(255, 0, 234, 0.4);  
   }
   body > * > * > * {
-    background-color: rgba(255, 0, 255, 0.3);
+    background-color: rgba(43, 255, 0, 0.4);
   }
-  /*  -------Временно ------- */
+  /*-------Временно ------- */
   .main-header {
     margin-bottom: 59px;
     margin-top: 0; 
 
-  /* Временно для сетки */    
+    /* Временно для сетки */    
     min-height: 320px;
   }
+  .index-header {
+
+  /* Временно для сетки */    
+  min-height: 42px;
+  }
+  .logo {
+  width: 220px;  
+
+  /* Временно для сетки */    
+  min-height: 47;    
+  }
+
