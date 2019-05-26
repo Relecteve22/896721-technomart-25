@@ -1,4 +1,4 @@
-  body {
+   /* body {
     margin: 0;
     padding: 0;
 
@@ -83,11 +83,12 @@
   .checkout a:focus {
       background-color: #518534;
   }
-  .main-h1 {
+  .about-company-h1 {
     color: #ee3643;
     font-style: italic;
     font-size: 16px;
     line-height: 23px;
+    margin: 0 ;
   }
   .phone a {
     font-size: 21px; 
@@ -111,9 +112,6 @@
   .join-reg a:hover {
       color: #ee3643;
   }
-  /* .join-reg a:focus {
-    color: ;
-  } */
 
   .visually-hidden {
     display: none;
@@ -133,14 +131,13 @@
   .main-nav a:focus {
     background-color:#1d2739;
   }
-  /* Общие стили для слайдов */
-  .card span:nth-child(1) {
+  .card span {
     font-weight: bold;
     font-size: 24px;
+    line-height: 30px;
   }
   .card a {
     color: #fff;
-    font-style: 700;
     font-weight: bold;
     font-size: 14px;
     background-color: rgba(0, 0, 0, 0.1);
@@ -163,18 +160,25 @@
     background-color: #dc91d8;
   }
 
-  .slaider-1 {
+  .slider-1 {
     background-color: #1a0f0d;
-    background-image: url("img/slider1.jpg");
+    background-image: url("../img/slider1.jpg");
+    background-repeat: no-repeat;
+    width: 620px;
+    min-height: 266px;
+    display: none;
   }
-  .slaider-2 {
+  .slider-2 {
     background-color: #1a0f0d;
-    background-image: url("img/slider.jpg");
+    background-image: url("../img/slider.jpg");
+    background-repeat: no-repeat;
+    width: 620px;
+    min-height: 266px;
   }
   .slider span {
     font-size: 36px;
     line-height: 36px;
-    font-style: 700px;
+    font-weight: 700;
   }
   .slider p {
     font-size: 18px;
@@ -209,7 +213,6 @@
   .buy a:focus {
     background-color: #518534;
   }
-
   .in-cart a {
     border: 3px solid #63a63e;
     font-size: 14px; 
@@ -221,33 +224,30 @@
   .in-cart a:focus {
     border: 3px solid #c1c6ce;
   }
-
   .popular-manufacturers h2 {
-      color: #32425c;
-      font-size: 30px;
-      line-height: 30px;
+    color: #32425c;
+    font-size: 30px;
+    line-height: 30px;
   }
   .popular-items h2 {
     color: #32425c;
     font-size: 30px;
     line-height: 30px;
   }
-  /* --------- */
   .bg-popular-items a {
-      background-color: #ee3643;
-      color: #fff;
+    background-color: #ee3643;
+    color: #fff;
+    font-size: 14px;
   }
   .bg-popular-items {
-      background-color: #f9f5f0;
+    background-color: #f9f5f0;
   }
   
-   .mini-catalog-item li {
-      border: 1px solid #eaeaea;
-      width: 218px;
-      height: 316px;
+  .mini-catalog-item li {
+    border: 1px solid #eaeaea;
+    width: 218px;
+    height: 316px;
   }
-  
-  
   .catalog-item h3 {
     font-family: "PT Sans", Arial, sans-serif;
     font-weight: bold;
@@ -261,14 +261,14 @@
     font-weight: bold;
     color: #a9a9a9;
     text-decoration: line-through;
+    font-family: "PT sans", Arial, sans-serif;
   }
   .stock-item {
-    line-height: 17px;
-    font-size: 18px;
     font-weight: bold;
     color: #fff;
     background-color: #ee3643;
     text-align: center;
+    font-family: "PT sans", Arial, sans-serif;
   }
   .mini-catalog-manufactures li {
       border: 1px solid #eaeaea;
@@ -304,12 +304,7 @@
   background-color: #293449;
   }
 
-  /* .choose-service  { 
-    font-weight: bold;
-    background-color: #fff;
-    border: none;
-    color: #32425c;
-  } */
+
   .service-credit a {
       font-size: 14px;
       color: #fff;
@@ -381,6 +376,7 @@
     font-size: 18px;
     line-height: 24px;
     color:#f3f7f9;
+    font-style: normal;
   }
 
   .footer-nav-top li {
@@ -401,7 +397,6 @@
     color: rgba(241, 245, 247, 0.5);
   }
     .top-footer span a {
-    font-style: 400px;
     color: #f3f7f9;
   }
   .footer-nav-bottom a {
@@ -424,6 +419,7 @@
   }
   .footer-down span {
     color: #fff;
+    font-size: 16px;
   }
   .footer-social li {
     list-style: none;
@@ -450,8 +446,7 @@
   }
   .footer-copyright a {
     color: #ffd180;
-    line-height: 24px;
-    font-size: 18px;
+    font-size: 16px;
   }
   .footer-copyright a:hover {
     text-decoration: underline;
@@ -507,15 +502,29 @@
     color: #000;
   }
   
-  .main-main h2 {
+  .catalog-service h2 {
     width: 940px;
     height: 89px;
-    line-height: 30px;
     color: #32425c;
     font-family: "Cuprum", Arial, sans-serif;
-    font-size: 30px;
     background-color: #f2f6f8;
   } 
+  .main-main h2 {
+    color: #000;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+  } 
+  .main-main .catalog {
+    color: #32425c;
+    background-color: #f2f6f8;
+    width: 940px;
+    height: 89px;
+  }
+  .main-main .catalog1 {
+    color: #32425c;
+
+  }
   .bg-sorting {
     background-color: #f7f3ec;
   }
@@ -595,6 +604,9 @@
   .pagination-item a:focus {
     border: 1px solid #ee3744;
   }
+  .buy-in-cart {
+    display: none;
+  }
   
   
   
@@ -605,5 +617,35 @@
     display: none;
   }
   .main-map {
-    display: none;
+    display: none; 
+  } */
+/* -------Для сетки------- */
+/*  -------Временно ------- */ 
+html,
+body {
+  min-width: 1200px;
+  min-height: 3151px;
+}
+  body {
+  background-image: url("../img/technomart-index.jpg");
+  background-size: 1200px auto;
+  background-position: top center;
+  background-repeat: no-repeat;
+  } 
+  body > * {
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+  body > * > * {
+    background-color: rgba(255, 255, 0, 0.3);  
+  }
+  body > * > * > * {
+    background-color: rgba(255, 0, 255, 0.3);
+  }
+  /*  -------Временно ------- */
+  .main-header {
+    margin-bottom: 59px;
+    margin-top: 0; 
+
+  /* Временно для сетки */    
+    min-height: 320px;
   }
