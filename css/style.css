@@ -1,7 +1,4 @@
-   /* body {
-    margin: 0;
-    padding: 0;
-
+   body {
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 17px;
     line-height: 18px;
@@ -13,6 +10,27 @@
   a {
     text-decoration: none;
   } 
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
    .index-header {
     background-color: #293449;
   }
@@ -88,8 +106,13 @@
     font-style: italic;
     font-size: 16px;
     line-height: 23px;
-    margin: 0 ;
-  }
+    margin: 0;
+    width: 200px;
+    padding-left: 52px;
+    margin-right: 70px;
+  /* Временно для сетки */    
+    min-height: 70px;  
+  } 
   .phone a {
     font-size: 21px; 
     border: 3px solid #fff;
@@ -112,18 +135,36 @@
   .join-reg a:hover {
       color: #ee3643;
   }
-
-  .visually-hidden {
-    display: none;
-  }
-  .header-down {
+  .main-header .container {
     background-color: #f4f7f9;
   }
   .main-nav li{
       list-style: none;
   }
+  .main-nav ul {
+    margin: 0;
+    margin-top: 42px;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    width: 940px;
+
+  }
+  .main-nav li:first-child a { 
+  padding-left: 52px;
+  padding-right: 34px;
+  } 
+  .main-nav li:last-child a {
+      padding-right: 52px;
+      padding-left: 34px;    
+  }   
   .main-nav a {
     background-color:#32425c;
+    display: block;
+    padding: 21px 30px;
+
+    vertical-align: middle; 
   }
   .main-nav a:hover {
     background-color:#293449;
@@ -254,6 +295,7 @@
     color: #000;
     font-size:  18px;
     line-height: 20px;
+    margin: 0;
   }
   .del-price {
     line-height: 18px;
@@ -276,7 +318,12 @@
       height: 143px;
   }
   .catalog-service {
-      background-color: #f5f8fa;
+    background-color: #f5f8fa;
+    margin-bottom: 75px; 
+    padding-top: 1px;
+
+  /* Временно для сетки */    
+    min-height: 525px;   
   }
 
   .catalog-service h2 {
@@ -284,12 +331,16 @@
     line-height: 30px;
     font-family: "Cuprum", Arial, sans-serif;
     color: #000;
+    margin-bottom: 13px;
+    margin-top: 65px;
+    padding-top: 1px;
   }
   .catalog-service p {
     color: #000;
     font-size: 13px;
     line-height: 24px;
     font-family: "PT Sans", Arial, sans-serif;
+    margin: 0;
   }
   .catalog-service button[type="button"] {
     font-size: 21px;
@@ -502,24 +553,19 @@
     color: #000;
   }
   
-  .catalog-service h2 {
-    width: 940px;
-    height: 89px;
-    color: #32425c;
-    font-family: "Cuprum", Arial, sans-serif;
-    background-color: #f2f6f8;
-  } 
-  .main-main h2 {
+  .contants-1 h2 {
     color: #000;
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
+    margin: 0;
   } 
   .main-main .catalog {
     color: #32425c;
     background-color: #f2f6f8;
     width: 940px;
     height: 89px;
+    margin: 20px 0;
   }
   .main-main .catalog1 {
     color: #32425c;
@@ -577,11 +623,13 @@
       height: 38px;
     }
     .about-perforators {
+      margin: 0 auto;
       background-color: #f2f6f8;
       width: 1200px;
-      height: 261px;
+      min-height: 260px;
     }
     .about-perforators h2  {
+      color: #000; 
       font-size: 30px;
       line-height: 30px;
       font-family: "Cuprum", Arial, sans-serif;
@@ -618,48 +666,425 @@
   }
   .main-map {
     display: none; 
-  } */
+  }
 /* -------Для сетки------- */
-/*-------Временно ------- */ 
-  html,
-  body {
-    min-width: 1200px;
-    min-height: 3151px;
-  }
-  body {
-    background-image: url("../img/technomart-index.jpg");
-    background-size: 1200px auto;
-    background-position: top center;
-    background-repeat: no-repeat;
-  } 
-  body > * {
-    background-color: rgba(255, 0, 0, 0.3);
-  }
-  body > * > * {
-    background-color: rgba(255, 0, 234, 0.5);  
-  }
-  body > * > * > * {
-    background-color: rgba(43, 255, 0, 0.6);
-  }
-  /*-------Временно ------- */
+  /* -------header------------- */
   .main-header {
     margin-bottom: 59px;
-    margin-top: 0; 
+    margin-top: 0;
+    background-color: #f2f6f8; 
 
-    /* Временно для сетки */    
+  /* Временно для сетки */    
     min-height: 320px;
   }
+  .container {
+    margin: 0 auto;
+    width: 940px;   
+  }
   .index-header {
-  width: auto;
+    width: auto;
+    display: flex;
+    margin-bottom: 41px;
 
-  /* Временно для сетки */    
-  min-height: 42px;
+    /* Временно для сетки */    
+    min-height: 42px;
   }
   .main-header-logo {
-  width: 220px;  
+    width: 220px; 
+    background-color: #ee3643;
+    height: 47px;
+  }
+  .menu {
+    width: 720px; 
+    display: flex;
+
+  /* Временно для сетки */
+    min-height: 42px; 
+  }
+  .header-top {
+    width: 940px;
+    display: flex;
 
   /* Временно для сетки */    
-  min-height: 47px;    
-  display: block;  
+    min-height: 70px;   
   }
 
+  .contants-info {
+    margin: 0;
+    width: 270px;
+
+  /* Временно для сетки */    
+    min-height: 70px;    
+  }
+  .join-reg {
+    margin: 0;
+    padding: 0;
+
+    max-width: 200px;
+    margin-left: auto;
+  /* Временно для сетки */    
+    min-height: 45px;    
+  }
+  .main-nav {
+    width: 940px;
+  /* Временно для сетки */    
+    min-height: 60px;    
+  }
+  /* ------------------/header--------------------- */
+  /* ---------1-main------------ */
+
+  .middle-nav {
+    width: 940px;
+    display: flex;
+    margin-bottom: 53px; 
+    margin-top: 59px;
+
+  /* Временно для сетки */    
+    min-height: 410px; 
+  }
+  .speaker-left {
+    margin-right: 20px;
+    width: 620px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  /* Временно для сетки */    
+    min-height: 410px; 
+  }
+  .speaker-right {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  /* Временно для сетки */    
+    min-height: 410px;     
+  }
+  .card {
+    width: 300px;
+  /* Временно для сетки */    
+    min-height: 123px; 
+  }
+  .slider {
+    width: 620px;
+    margin-top: 20px;
+  /* Временно для сетки */    
+    min-height: 266px; 
+  }
+  .slider-2 {
+    width: 620px;
+    margin-top: 20px;
+  /* Временно для сетки */    
+    min-height: 266px;     
+  }
+  /* ---------/1-main------------ */
+  /* ---------2-main------------ */
+  .mini-catalog-item {
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+    
+    width: 940px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  /* Временно для сетки */    
+    min-height: 320px;    
+  }
+  .popular-items {
+    width: 940px;
+    margin-bottom: 21px;
+
+  /* Временно для сетки */    
+  min-height: 427px;       
+  }
+  .bg-popular-items {
+    width: 940px;
+    margin-bottom: 20px;
+  /* Временно для сетки */    
+    min-height: 89px;      
+  }
+  .catalog-item {
+    width: 220px;
+
+  /* Временно для сетки */    
+    min-height: 320px;    
+  }
+  /* ---------/2-main------------ */
+    /* ---------3-main------------ */
+  .mini-catalog-manufactures {
+
+    margin: 0;
+    padding: 0;
+
+    margin-bottom: 85px;
+
+    list-style: none;
+    
+    width: 940px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  /* Временно для сетки */    
+    min-height: 310px;   
+  }
+  .popular-manufacturers {
+    width: 940px;
+
+  /* Временно для сетки */    
+  min-height: 420px;       
+  }  
+  .bg-popular-items {
+    width: 940px;
+    margin-bottom: 20px;
+  /* Временно для сетки */    
+    min-height: 89px;      
+  }
+  .mini-catalog-manufactures li {
+    width: 220px;
+    margin-bottom: 20px;
+
+  /* Временно для сетки */    
+    min-height: 145px;    
+  }
+  .mini-catalog-manufactures li:nth-child(5) {
+    margin-bottom: 0   
+  }
+  .mini-catalog-manufactures li:nth-child(6) {
+    margin-bottom: 0   
+  }
+  .mini-catalog-manufactures li:nth-child(7) {
+    margin-bottom: 0   
+  }
+  .mini-catalog-manufactures li:nth-child(8) {
+    margin-bottom: 0   
+  }
+  /* ---------/3-main------------ */  
+  /* ---------4-main------------ */  
+
+  .service {
+  margin: 0;
+  padding: 0;
+    
+  list-style: none;
+  }
+
+  .service-warranty {
+    display: none;
+  }
+  .service-credit {
+    display: none;
+  }
+  /* ---------/4-main------------ */ 
+  /* ---------5-main------------ */ 
+  .about-company {
+    width: 525px;
+
+  /* Временно для сетки */    
+    min-height: 370px;   
+  }
+  .contants {
+    width: 300px;
+    margin-left: auto;
+
+    /* Временно для сетки */    
+      min-height: 370px;  
+  }
+  .contants-1 {
+    display: flex;
+    margin-bottom: 86px;
+  }
+  /* ---------/5-main------------ */   
+  /* ---------6-main------------ */ 
+  .main-footer {
+    width: 1200px;
+    margin-left: auto; 
+    margin-right: auto;
+
+  /* Временно для сетки */    
+  min-height: 300px;      
+  }
+  .top-footer {
+    width: 1200px;
+    display: flex;
+
+  /* Временно для сетки */    
+    min-height: 193px;      
+  }
+  .footer-down {
+    width: 1200px;
+    display: flex;
+  /* Временно для сетки */    
+    min-height: 107px;   
+  }
+  .company-yer {
+    width: 230px;
+    margin-left: 130px;
+    margin-right: 160px;
+  /* Временно для сетки */    
+  min-height: 107px;     
+  }
+  .footer-social {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 120px;
+    padding: 0;
+      
+    list-style: none;
+
+    width: 132px;
+    
+  /* Временно для сетки */    
+    min-height: 107px;  
+  }
+  .footer-connection {
+    margin-right: 53px;
+    width: 135px;
+
+  /* Временно для сетки */    
+  min-height: 107px;    
+  }
+  .footer-copyright {
+    width: 96px;
+
+    margin-right: 145px;
+  /* Временно для сетки */    
+  min-height: 107px;    
+  } 
+
+
+
+  .contants-info {
+    width: 335px;
+    margin-left: auto;
+  /* Временно для сетки */    
+    min-height: 70px;  
+  }
+  .footer-nav {
+    width: 555px;
+    margin-right: auto;
+    margin-left: 68px;
+  /* Временно для сетки */    
+  min-height: 193px;     
+  }
+  .footer-nav-top {
+    margin: 0;
+    padding: 0;
+      
+    list-style: none;    
+  }
+  .footer-nav-bottom {
+    margin: 0;
+    padding: 0;
+      
+    list-style: none;    
+  }
+  .catalog-item-price {
+    margin: 0;
+  }
+  .catalog-item-image {
+    margin: 0;
+  }
+  .catalog-service ul {
+    margin: 0;
+    padding: 0;
+  }
+  /* .header-top ul {
+    margin: 0;
+    padding: 0;
+  } */
+  .account {
+    margin-left: auto;
+  }
+  .service-delivery {
+    background-image: url("../img/service-delivery.png");
+    background-repeat: no-repeat;
+  }
+  .service-warranty {
+    background-image: url("../img/service-warranty.png");
+    background-repeat: no-repeat;
+  }
+  .service-credit {
+    background-image: url("../img/service-credit.png");
+    background-repeat: no-repeat;
+  }
+  /*-------Временно ------- */  
+  .breadcrumbs {
+    padding: 0;
+    height: 10px;
+    margin: 20px 0;
+    display: flex; 
+
+  /* Временно для сетки */      
+    min-height: 18px;
+
+    list-style: none;
+  }
+  /* .catalog {
+    margin: 0;
+    height: 90px;
+  } */
+  .main-main {
+    padding-top: 1px;
+  }
+  /* .catalog-menu {
+    min-height: 40px;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: 16px;
+  } */ 
+   .catalog-columns {
+    display: flex;
+    justify-content: space-between;    
+    margin-bottom: 60px;
+  }  
+  .filter {
+    width: 220px;
+
+    min-height: 1142px;
+  }
+  .main-catalog-items {
+    width: 700px;
+    min-height: 1142px;
+  }
+  .bg-sorting {
+    width: 700px;
+    min-height: 40px;
+    margin-bottom: 20px;
+  }  
+  .catalog-items {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 32px;
+  
+    list-style: none;
+  }
+  .catalog-item {
+    width: 218px;
+    border: #e5e5e5 1px solid;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
+    min-height: 316px;
+  }
+  .catalog-item:nth-child(3n) {
+    margin-right: 0;
+  }
+  .pagination-list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+  
+    list-style: none; 
+    
+    min-height: 38px;
+  }
+  .sorting-items {
+    display: flex;
+  }
