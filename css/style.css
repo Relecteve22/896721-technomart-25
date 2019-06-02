@@ -551,6 +551,7 @@ input[type="radio"].visually-hidden {
   }
   .breadcrumbs a {
     color: #000;
+    text-transform: uppercase;
   }
   
   .contants-1 h2 {
@@ -566,6 +567,7 @@ input[type="radio"].visually-hidden {
     width: 940px;
     height: 89px;
     margin: 20px 0;
+    text-transform: uppercase;
   }
   .main-main .catalog1 {
     color: #32425c;
@@ -587,7 +589,9 @@ input[type="radio"].visually-hidden {
     color: rgba(50, 66, 92, 0.3);
     text-decoration-color: #ee3643;
     text-decoration-line: underline;
-    text-decoration-style: dotted;  
+    text-decoration-style: dotted; 
+    font-family: "PT Sans", Arial, sans-serif;
+    font-size: 13px;     
   }
   .bg-sorting a:hover {
     color: #000;
@@ -595,7 +599,8 @@ input[type="radio"].visually-hidden {
   }
   .filter {
     color: #000;
-    
+    text-transform: uppercase; 
+    font-family: "PT Sans", Arial, sans-serif;    
   }
   .filter li {
     list-style: none;
@@ -607,7 +612,7 @@ input[type="radio"].visually-hidden {
   }
   .filter fieldset {
     border: none;
-    border-block-start: 1px solid #e5e5e5;
+    /* border-block-start: 1px solid #e5e5e5; */
   }
   .filter label {
     font-size: 15px;
@@ -616,24 +621,29 @@ input[type="radio"].visually-hidden {
   .filter button[type="submit"] {
     background-color: #fff;
     border: 1px solid #e5e5e5;
-    }
-    .half-width {
-      background-color: #f7f3ec;
-      width: 95px;
-      height: 38px;
-    }
-    .about-perforators {
-      margin: 0 auto;
-      background-color: #f2f6f8;
-      width: 1200px;
-      min-height: 260px;
-    }
-    .about-perforators h2  {
-      color: #000; 
-      font-size: 30px;
-      line-height: 30px;
-      font-family: "Cuprum", Arial, sans-serif;
-    }
+    text-transform: uppercase; 
+    font-size: 13px;
+    padding: 0;
+    line-height: 18px;
+  }
+  .half-width {
+    background-color: #f7f3ec;
+    width: 95px;
+    height: 38px;
+  }
+  .about-perforators {
+    margin: 0 auto;
+    background-color: #f2f6f8;
+    width: 1200px;
+    min-height: 260px;
+  }
+  .about-perforators h2  {
+    color: #000; 
+    font-size: 30px;
+    line-height: 30px;
+    font-family: "Cuprum", Arial, sans-serif;
+    text-transform: uppercase; 
+  }
     .about-perforators p  {
       color: #000;
       font-size: 13px;
@@ -645,6 +655,7 @@ input[type="radio"].visually-hidden {
     line-height: 18px;
     color: #000;
     border: 1px solid #f2f2f2;
+    font-family: "PT Sans", Arial, sans-serif;    
   }
   .pagination-item a:hover {
     border: 1px solid #bdc6ca;
@@ -654,6 +665,7 @@ input[type="radio"].visually-hidden {
   }
   .buy-in-cart {
     display: none;
+    text-transform: uppercase; 
   }
   
   
@@ -682,7 +694,6 @@ input[type="radio"].visually-hidden {
     width: 940px;   
   }
   .index-header {
-    width: auto;
     display: flex;
     margin-bottom: 41px;
 
@@ -1053,8 +1064,9 @@ input[type="radio"].visually-hidden {
   }
   .bg-sorting {
     width: 700px;
-    min-height: 40px;
+    min-height: 38px;
     margin-bottom: 20px;
+    text-transform: uppercase; 
   }  
   .catalog-items {
     display: flex;
@@ -1080,11 +1092,27 @@ input[type="radio"].visually-hidden {
     padding: 0;
     margin: 0;
     display: flex;
+    text-transform: uppercase; 
   
     list-style: none; 
-    
+
+    /* Временно для разметки  */
     min-height: 38px;
   }
   .sorting-items {
     display: flex;
+  }
+  .filter-name {
+    margin: 0;
+    margin-top: 20px;
+    padding: 0;
+    font-size: 13px;
+    background-color: #f7f3ec;
+    width: 220px;
+    line-height: 18px;
+    min-height: 38px;
+  } 
+  .filter ul {
+    margin: 0;
+    padding: 0;
   }
