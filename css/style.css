@@ -14,24 +14,24 @@
     max-width: 100%;
     height: auto;
   }
-.visually-hidden:not(:focus):not(:active),
-input[type="checkbox"].visually-hidden,
-input[type="radio"].visually-hidden {
-  position: absolute;
+  .visually-hidden:not(:focus):not(:active),
+  input[type="checkbox"].visually-hidden,
+  input[type="radio"].visually-hidden {
+    position: absolute;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
 
-  white-space: nowrap;
+    white-space: nowrap;
 
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-   .index-header {
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  .index-header {
     background-color: #293449;
   }
   .logo {
@@ -72,7 +72,7 @@ input[type="radio"].visually-hidden {
     color: #000;
   }
   .main-header a {
-    color: #fff;
+    color: #fff;    
   }
   .bookmarks a:hover {
     background-color: #212a3a;
@@ -135,9 +135,9 @@ input[type="radio"].visually-hidden {
   .join-reg a:hover {
       color: #ee3643;
   }
-  .main-header .container {
+  /* .main-header .container {
     background-color: #f4f7f9;
-  }
+  } */
   .main-nav li{
       list-style: none;
   }
@@ -632,13 +632,15 @@ input[type="radio"].visually-hidden {
     height: 38px;
   }
   .about-perforators {
-    margin: 0 auto;
     background-color: #f2f6f8;
-    width: 1200px;
+    width: 100%;
     min-height: 260px;
   }
   .about-perforators h2  {
-    color: #000; 
+    padding-top: 65px;
+    margin-bottom: 28px;
+    margin: 0;
+    color: #000;
     font-size: 30px;
     line-height: 30px;
     font-family: "Cuprum", Arial, sans-serif;
@@ -690,13 +692,13 @@ input[type="radio"].visually-hidden {
     min-height: 320px;
   }
   .container {
+    width: 940px;
     margin: 0 auto;
-    width: 940px;   
+    padding: 0 10px; 
   }
-  .index-header {
+  .index-header .container {
     display: flex;
     margin-bottom: 41px;
-
     /* Временно для сетки */    
     min-height: 42px;
   }
@@ -795,6 +797,7 @@ input[type="radio"].visually-hidden {
 
     margin: 0;
     padding: 0;
+    padding-bottom: 1px;
 
     list-style: none;
     
@@ -807,7 +810,7 @@ input[type="radio"].visually-hidden {
   }
   .popular-items {
     width: 940px;
-    margin-bottom: 21px;
+    margin-bottom: 0;
 
   /* Временно для сетки */    
   min-height: 427px;       
@@ -912,7 +915,7 @@ input[type="radio"].visually-hidden {
   /* ---------/5-main------------ */   
   /* ---------6-main------------ */ 
   .main-footer {
-    width: 1200px;
+    width: 100%;
     margin-left: auto; 
     margin-right: auto;
 
@@ -920,21 +923,25 @@ input[type="radio"].visually-hidden {
   min-height: 300px;      
   }
   .top-footer {
-    width: 1200px;
+    width: 100%;
     display: flex;
 
   /* Временно для сетки */    
     min-height: 193px;      
   }
+  .top-footer .container {
+    display: flex;      
+  }
   .footer-down {
-    width: 1200px;
-    display: flex;
+    width: 100%;
   /* Временно для сетки */    
     min-height: 107px;   
   }
+  .footer-down .container {
+    display: flex;
+  }
   .company-yer {
     width: 230px;
-    margin-left: 130px;
     margin-right: 160px;
   /* Временно для сетки */    
   min-height: 107px;     
@@ -971,24 +978,23 @@ input[type="radio"].visually-hidden {
 
   .contants-info {
     width: 335px;
-    margin-left: auto;
   /* Временно для сетки */    
     min-height: 70px;  
   }
   .footer-nav {
     width: 555px;
-    margin-right: auto;
-    margin-left: 68px;
   /* Временно для сетки */    
   min-height: 193px;     
   }
   .footer-nav-top {
+    display: flex;    
     margin: 0;
     padding: 0;
       
     list-style: none;    
   }
   .footer-nav-bottom {
+    display: flex;    
     margin: 0;
     padding: 0;
       
@@ -1115,4 +1121,15 @@ input[type="radio"].visually-hidden {
   .filter ul {
     margin: 0;
     padding: 0;
+  }
+  .catalog-item:hover .buy-in-cart {
+    display: block;
+  }
+  .mini-catalog-item li:nth-child(3n) {
+    margin-left: 0;
+    margin-right: 20px;
+  }
+  .mini-catalog-item li:nth-child(4n) {
+    margin-left: 0;
+    margin-right: 0;
   }
