@@ -51,6 +51,10 @@
     border: none;
     background-color: #293449;
     color: #fff;
+    width: 270px;
+
+    min-height: 42px;
+
   }
   .header-search::-webkit-input-placeholder {
      color: #fff;
@@ -70,9 +74,14 @@
   .header-search:focus {
     background-color: #fff;
     color: #000;
+    border: none;
   }
   .main-header a {
     color: #fff;    
+  }
+  .bookmarks {
+    width: 150px;
+    min-height: 42px;
   }
   .bookmarks a:hover {
     background-color: #212a3a;
@@ -82,6 +91,10 @@
   }
   .bookmarks a:active {
     background-color: #161d29;
+  }
+  .basket {
+    width: 150px;
+    min-height: 42px;
   }
   .basket a:hover {
     background-color: #212a3a;
@@ -94,6 +107,8 @@
   }
   .checkout {
     background-color: #63a63e;
+    width: 150px;
+    min-height: 42px;
   }
   .checkout a:hover {
       background-color: #5fbb2d;
@@ -107,7 +122,7 @@
     font-size: 16px;
     line-height: 23px;
     margin: 0;
-    width: 200px;
+    width: 210px;
     padding-left: 52px;
     margin-right: 70px;
   /* Временно для сетки */    
@@ -125,19 +140,27 @@
       color: #32425c;
   }
   .join-reg li {
-      list-style: none;
+    list-style: none;
   }
   .join-reg a {
     font-size: 21px;
     color: #000;
     background-color: #fff;
   }
+  .join a {
+    width: 121px;
+    height: 45px;
+    margin-right: 10px;
+  }
+  .register a {
+    width: 150px;
+    height: 45px;
+  }
+
+
   .join-reg a:hover {
       color: #ee3643;
   }
-  /* .main-header .container {
-    background-color: #f4f7f9;
-  } */
   .main-nav li{
       list-style: none;
   }
@@ -147,24 +170,21 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
+    padding-left: 22px;
+    padding-right: 22px;
+    background-color: #32425c;
 
-    width: 940px;
+    width: 900px;
 
   }
-  .main-nav li:first-child a { 
-  padding-left: 52px;
-  padding-right: 34px;
-  } 
-  .main-nav li:last-child a {
-      padding-right: 52px;
-      padding-left: 34px;    
-  }   
+  .main-nav li:first-child::before {
+    background-color: red;
+    width: 11px;
+    margin-left: -11px;
+  }
   .main-nav a {
-    background-color:#32425c;
     display: block;
     padding: 21px 30px;
-
-    vertical-align: middle; 
   }
   .main-nav a:hover {
     background-color:#293449;
@@ -266,11 +286,13 @@
     border: 3px solid #c1c6ce;
   }
   .popular-manufacturers h2 {
+    margin: 0;
     color: #32425c;
     font-size: 30px;
     line-height: 30px;
   }
   .popular-items h2 {
+    margin: 0;
     color: #32425c;
     font-size: 30px;
     line-height: 30px;
@@ -279,6 +301,10 @@
     background-color: #ee3643;
     color: #fff;
     font-size: 14px;
+    height: 38px;
+    width: 253px;
+    margin-left: auto;
+    margin-right: 24px;
   }
   .bg-popular-items {
     background-color: #f9f5f0;
@@ -313,9 +339,7 @@
     font-family: "PT sans", Arial, sans-serif;
   }
   .mini-catalog-manufactures li {
-      border: 1px solid #eaeaea;
-      width: 218px;
-      height: 143px;
+    border: 1px solid #eaeaea;
   }
   .catalog-service {
     background-color: #f5f8fa;
@@ -350,6 +374,13 @@
     background-color: #32425c;
     border: none;
     color: #fff;
+    display: block;
+    padding-left: 23px;
+    padding-right: 140px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin: 0;
+    width: 240px;
   }
   .catalog-service button[type="button"]:hover {
   background-color: #293449;
@@ -362,12 +393,13 @@
       background-color: #ff5357;
   }
   .catalog-service li {
-      list-style: none;
+    list-style: none;
   }
   .catalog-service h3 {
-      color: #32425c;
-      font-size: 36px;
-      line-height: 36px;
+    color: #32425c;
+    font-size: 36px;
+    line-height: 36px;
+    margin: 0;
   }
   .middle-nav li {
       list-style: none;
@@ -389,6 +421,11 @@
     line-height: 20px;
     list-style: none;
   }
+  .company-delivery li::before{
+    width: 25px;
+    height: 2px;
+    background-color: #ee3643;
+  }
   .about-company a {
     font-size: 14px;
     color: #fff;
@@ -406,6 +443,9 @@
     font-size: 13px;
     line-height: 24px;   
     font-family: "PT Sans", Arial, sans-serif;
+    margin-top: 32px;
+    margin-bottom: 34px;
+
   }
   .contants button[type="button"] {
     font-size: 14px;
@@ -414,14 +454,17 @@
     background-color: #ee3643;
     border: none;
     color: #fff;
+    margin-top: 40px;
+    width: 300px;
+    min-height: 38px; 
   }
   .top-footer {
     background-color: #32425c;
 
   }
   .top-footer img {
-    background-color: #ee3643;
     text-align: center;
+    background-color: #ee3643;    
   }
   .top-footer address {
     font-size: 18px;
@@ -463,8 +506,6 @@
   .footer-nav-bottom a:focus {
     color: rgba(255, 209, 128, 0.5);
   }
-
-
   .footer-down {
     background-color: #293449;
   }
@@ -477,6 +518,8 @@
   }
   .footer-social a {
     background-color: #212a3a;
+    width: 42px;
+    min-height: 42px;
   }
   .footer-connection a {
     color: #ffd180;
@@ -651,6 +694,8 @@
       font-size: 13px;
       line-height: 24px;
       font-family: "PT Sans", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
     }
   .pagination-item a {
     font-size: 13px;
@@ -658,6 +703,15 @@
     color: #000;
     border: 1px solid #f2f2f2;
     font-family: "PT Sans", Arial, sans-serif;    
+    width: 38px;
+    min-height: 38px; 
+    display: block;
+    margin-left: 10px;
+  }
+  .pagination-list li:last-child a {
+    margin-left: 0;
+    min-width: 140px;
+    min-height: 38px; 
   }
   .pagination-item a:hover {
     border: 1px solid #bdc6ca;
@@ -705,7 +759,7 @@
   .main-header-logo {
     width: 220px; 
     background-color: #ee3643;
-    height: 47px;
+    height: 42px;
   }
   .menu {
     width: 720px; 
@@ -714,7 +768,7 @@
   /* Временно для сетки */
     min-height: 42px; 
   }
-  .header-top {
+  .header-info {
     width: 940px;
     display: flex;
 
@@ -732,8 +786,9 @@
   .join-reg {
     margin: 0;
     padding: 0;
+    display: flex;
 
-    max-width: 200px;
+    max-width: 300px;
     margin-left: auto;
   /* Временно для сетки */    
     min-height: 45px;    
@@ -746,12 +801,11 @@
   /* ------------------/header--------------------- */
   /* ---------1-main------------ */
 
-  .middle-nav {
+  .middle-nav .container {
     width: 940px;
     display: flex;
     margin-bottom: 53px; 
-    margin-top: 59px;
-
+  
   /* Временно для сетки */    
     min-height: 410px; 
   }
@@ -808,18 +862,19 @@
   /* Временно для сетки */    
     min-height: 320px;    
   }
-  .popular-items {
+  .popular-items .container {
     width: 940px;
     margin-bottom: 0;
 
   /* Временно для сетки */    
   min-height: 427px;       
   }
-  .bg-popular-items {
+  .bg-popular-items  {
     width: 940px;
     margin-bottom: 20px;
   /* Временно для сетки */    
-    min-height: 89px;      
+    min-height: 89px;   
+    display: flex;   
   }
   .catalog-item {
     width: 220px;
@@ -834,8 +889,6 @@
     margin: 0;
     padding: 0;
 
-    margin-bottom: 85px;
-
     list-style: none;
     
     width: 940px;
@@ -846,35 +899,38 @@
   /* Временно для сетки */    
     min-height: 310px;   
   }
-  .popular-manufacturers {
-    width: 940px;
+  .popular-manufacturers .container {
+    margin-bottom: 85px;
 
   /* Временно для сетки */    
   min-height: 420px;       
   }  
-  .bg-popular-items {
-    width: 940px;
-    margin-bottom: 20px;
-  /* Временно для сетки */    
-    min-height: 89px;      
-  }
   .mini-catalog-manufactures li {
+    margin-bottom: 20px;  
+  }
+  .mini-catalog-manufactures a {
+    display: flex;
     width: 220px;
-    margin-bottom: 20px;
+    display: flex;
 
   /* Временно для сетки */    
     min-height: 145px;    
   }
-  .mini-catalog-manufactures li:nth-child(5) {
-    margin-bottom: 0   
+  .mini-catalog-manufactures img {
+    margin: auto;
   }
-  .mini-catalog-manufactures li:nth-child(6) {
-    margin-bottom: 0   
+   .mini-catalog-manufactures a:hover  {
+    box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
   }
-  .mini-catalog-manufactures li:nth-child(7) {
-    margin-bottom: 0   
-  }
-  .mini-catalog-manufactures li:nth-child(8) {
+  .mini-catalog-manufactures a:focus  {
+    opacity: 0.3;
+    box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
+  }  
+
+
+
+  
+  .mini-catalog-manufactures li:nth-child(n+5) {
     margin-bottom: 0   
   }
   /* ---------/3-main------------ */  
@@ -941,50 +997,46 @@
     display: flex;
   }
   .company-yer {
-    width: 230px;
-    margin-right: 160px;
+    width: 240px;
+    margin-right: 150px;
   /* Временно для сетки */    
   min-height: 107px;     
   }
   .footer-social {
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
     margin-right: 120px;
     padding: 0;
       
     list-style: none;
 
-    width: 132px;
+    width: 130px;
     
   /* Временно для сетки */    
     min-height: 107px;  
   }
   .footer-connection {
-    margin-right: 53px;
-    width: 135px;
+    width: 140px;
 
   /* Временно для сетки */    
   min-height: 107px;    
   }
   .footer-copyright {
-    width: 96px;
+    width: 110px;
 
-    margin-right: 145px;
+    margin-left: auto;
   /* Временно для сетки */    
-  min-height: 107px;    
+    min-height: 107px;    
   } 
-
-
-
   .contants-info {
-    width: 335px;
+    width: 330px;
   /* Временно для сетки */    
     min-height: 70px;  
   }
   .footer-nav {
-    width: 555px;
+    width: 550px;
   /* Временно для сетки */    
-  min-height: 193px;     
+  min-height: 193px; 
+  margin-left: auto;    
   }
   .footer-nav-top {
     display: flex;    
@@ -1002,13 +1054,17 @@
   }
   .catalog-item-price {
     margin: 0;
+    order: -1;
   }
   .catalog-item-image {
     margin: 0;
+    margin-bottom: 10px;
   }
   .catalog-service ul {
     margin: 0;
     padding: 0;
+    width: 240px;
+    min-height: 185px;
   }
   /* .header-top ul {
     margin: 0;
@@ -1017,10 +1073,30 @@
   .account {
     margin-left: auto;
   }
-  .service-delivery {
+  /* .service-delivery {
     background-image: url("../img/service-delivery.png");
     background-repeat: no-repeat;
+  } */
+  .service-delivery {
+    position: relative;
+    width: 275px;
+
+
   }
+  .service-delivery::after {
+    content: "";
+    position: absolute;
+    background-image: url("../img/service-delivery.png");
+    background-repeat: no-repeat;
+    width: 468px;
+    height: 261px;
+    top: 0;
+    left: 140px;
+  }
+
+
+
+
   .service-warranty {
     background-image: url("../img/service-warranty.png");
     background-repeat: no-repeat;
@@ -1057,7 +1133,6 @@
    .catalog-columns {
     display: flex;
     justify-content: space-between;    
-    margin-bottom: 60px;
   }  
   .filter {
     width: 220px;
@@ -1088,17 +1163,25 @@
     border: #e5e5e5 1px solid;
     margin-bottom: 20px;
     margin-right: 20px;
+    display: flex;
+    flex-direction: column-reverse;
 
     min-height: 316px;
   }
   .catalog-item:nth-child(3n) {
     margin-right: 0;
   }
+  .catalog-item img {
+    width: 218px;
+    height: 170px;
+    align-self: flex-end;
+  } 
   .pagination-list {
     padding: 0;
     margin: 0;
     display: flex;
     text-transform: uppercase; 
+    margin-bottom: 60px;
   
     list-style: none; 
 
@@ -1132,4 +1215,7 @@
   .mini-catalog-item li:nth-child(4n) {
     margin-left: 0;
     margin-right: 0;
+  }
+  .information {
+    display: flex;
   }
