@@ -47,17 +47,43 @@
   .logo:active {
     background-color: #ba2732;
   }
+  .search {
+    position: relative;
+  }
+  .search:hover {
+    background-color: #212a3a;
+    opacity: 1;
+  }
+  /* Сверху костыль) */
+  .search svg {
+    position: absolute;
+    opacity: 0.3;
+    top: 2px;
+    left: 17px;
+  }
+  .search path {
+    fill: #fff;
+  }
   .header-search {
+    padding: 0;
     border: none;
     background-color: #293449;
     color: #fff;
+    /* width: 220px; */
     width: 270px;
-
     min-height: 42px;
-
+    padding-left: 49px;
   }
+  .checkbox-indicator {
+    content: "";
+    width: 17px;
+    height: 17px;
+    opacity: 0.3;
+    background-image: url("../img/icon-search.svg");
+  } 
+
   .header-search::-webkit-input-placeholder {
-     color: #fff;
+    color: #fff;
   }
   .header-search:-ms-input-placeholder { 
     color: #fff; 
@@ -77,11 +103,31 @@
     border: none;
   }
   .main-header a {
-    color: #fff;    
+    color: #fff;  
+  }
+  .bookmarks a {
+    padding-top:14px ;   
+    padding-bottom: 14px;  
+    padding-left: 44px; 
+    padding-right: 28px;  
+  }
+  .main-header-logo {
+    display: flex;
+  }
+  .main-header-logo:hover {
+    background-color: #ca2c37; 
+  }
+  .main-header-logo:active,
+  .main-header-logo:focus  {
+    background-color: #ba2732; 
+  }
+  .main-header img {
+    margin: auto;
   }
   .bookmarks {
-    width: 150px;
+    /* width: 150px; */
     min-height: 42px;
+    display: flex;
   }
   .bookmarks a:hover {
     background-color: #212a3a;
@@ -127,17 +173,39 @@
     margin-right: 70px;
   /* Временно для сетки */    
     min-height: 70px;  
-  } 
+  }   
+  .phone {
+    padding-top: 13px;
+    padding-bottom: 11px;
+    padding-right: 52px;
+    padding-left: 74px;
+    border: 3px solid #fff;
+    display: block;
+    
+  }
   .phone a {
     font-size: 21px; 
-    border: 3px solid #fff;
     color: #ee3643;
     line-height: 21px;
+    position: relative;
+  }
+  .phone a::before {
+    content: "";
+    background-image: url(../img/icon-phone.svg);
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    left: -59px;
   }
   .address-small {
-      font-style: normal;
-      font-size: 14px;
-      color: #32425c;
+    font-style: normal;
+    font-size: 14px;
+    color: #32425c;
+    margin-top: 10px;
+    padding-left: 10px;
+  }
+  .info-contats {
+    width: 270px;
   }
   .join-reg li {
     list-style: none;
@@ -148,18 +216,29 @@
     background-color: #fff;
   }
   .join a {
-    width: 121px;
-    height: 45px;
     margin-right: 10px;
+    display: block;
+    padding-left: 48px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-right: 27px;
+  }
+  .join svg {
+    position: absolute;
+    left: 14px;
+    top: 15px;
+  }
+  .join path, 
+  .join polygon {
+    fill: #c5c5c5;
   }
   .register a {
     width: 150px;
     height: 45px;
+    display: block;    
   }
-
-
   .join-reg a:hover {
-      color: #ee3643;
+    color: #ee3643;
   }
   .main-nav li{
       list-style: none;
@@ -192,17 +271,72 @@
   .main-nav a:focus {
     background-color:#1d2739;
   }
+  
   .card span {
     font-weight: bold;
     font-size: 24px;
     line-height: 30px;
+    margin-left: 23px;
+    margin-top: 21px;
+    display: block;
   }
+  .materials::before {
+    content: "";
+    position: absolute;
+    width: 44px;
+    height: 65px;
+    background-image: url("../img/icon-1.svg");
+    right: 43px;
+    top: 31px;
+  }
+  .instruments::before {
+    content: "";
+    position: absolute;
+    width: 75px;
+    height: 61px;
+    background-image: url("../img/icon-2.svg");
+    right: 28px;
+    top: 33px;
+  }
+  .equipment::before {
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 62px;
+    background-image: url("../img/icon-3.svg");
+    right: 28px;
+    top: 31px;
+  }
+  .discount::before {
+    content: "";
+    position: absolute;
+    width: 59px;
+    height: 72px;
+    background-image: url("../img/icon-4.svg");
+    right: 45px;
+    top: 26px;
+  }
+  .delivery::before {
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 63px;
+    background-image: url("../img/icon-5.svg");
+    right: 31px;
+    top: 32px;
+  }
+
   .card a {
     color: #fff;
     font-weight: bold;
     font-size: 14px;
     background-color: rgba(0, 0, 0, 0.1);
-    text-align: center;
+    padding: 12px 24px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-left: 25px;
+    display: inline-block;
   }
   .card a:hover {
     background-color: rgba(0, 0, 0, 0.2);
@@ -240,16 +374,32 @@
     font-size: 36px;
     line-height: 36px;
     font-weight: 700;
+    margin-left: 24px;
+    margin-top: 27px;
+    display: block;
+    text-transform: uppercase; 
   }
   .slider p {
+    margin: 0;
     font-size: 18px;
     line-height: 24px;
+    margin-top: 8px;
+    margin-left: 25px;
   }
   .slider a {
     background-color: #ee3643;
     color: #fff;
     font-size: 14px;
     line-height: 18px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-right: 45px;
+    padding-left: 49px;
+    border-radius: 3px;
+    position: absolute;
+    bottom: 22px;
+    left: 25px;
+    text-transform: uppercase; 
   }
   .slider a:hover {
     background-color: #ca2c37;
@@ -290,21 +440,30 @@
     color: #32425c;
     font-size: 30px;
     line-height: 30px;
+    padding-left: 30px;
+    padding-top: 30px;
+    text-transform: uppercase;
   }
   .popular-items h2 {
     margin: 0;
     color: #32425c;
     font-size: 30px;
     line-height: 30px;
+    padding-top: 30px;
+    padding-left: 30px;
+    text-transform: uppercase;
   }
   .bg-popular-items a {
     background-color: #ee3643;
     color: #fff;
     font-size: 14px;
-    height: 38px;
-    width: 253px;
     margin-left: auto;
     margin-right: 24px;
+    display: block;
+    margin-top: 25px;
+    border-radius: 2px;
+    padding: 13px 70px;
+    text-transform: uppercase;
   }
   .bg-popular-items {
     background-color: #f9f5f0;
@@ -351,13 +510,17 @@
   }
 
   .catalog-service h2 {
+    text-transform: uppercase;
+    margin: 0;
     font-size: 30px;
     line-height: 30px;
     font-family: "Cuprum", Arial, sans-serif;
     color: #000;
-    margin-bottom: 13px;
     margin-top: 65px;
     padding-top: 1px;
+    margin-bottom: 38px;
+
+    
   }
   .catalog-service p {
     color: #000;
@@ -365,6 +528,7 @@
     line-height: 24px;
     font-family: "PT Sans", Arial, sans-serif;
     margin: 0;
+    margin-bottom: 74px;
   }
   .catalog-service button[type="button"] {
     font-size: 21px;
@@ -375,18 +539,17 @@
     border: none;
     color: #fff;
     display: block;
-    padding-left: 23px;
+    /* padding-left: 23px;
     padding-right: 140px;
     padding-top: 16px;
-    padding-bottom: 16px;
+    padding-bottom: 16px; */ 
+    padding: 11px 0 17px 23px;
     margin: 0;
-    width: 240px;
+    width: 217px;
   }
   .catalog-service button[type="button"]:hover {
   background-color: #293449;
   }
-
-
   .service-credit a {
       font-size: 14px;
       color: #fff;
@@ -400,6 +563,8 @@
     font-size: 36px;
     line-height: 36px;
     margin: 0;
+    text-transform: uppercase;
+    margin-bottom: 34px;
   }
   .middle-nav li {
       list-style: none;
@@ -415,21 +580,40 @@
     font-size: 13px;
     line-height: 24px;
     font-family: "PT Sans", Arial, sans-serif;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .company-delivery {
+    margin: 0;
+    padding: 0;
   }
   .company-delivery li {
     font-size: 18px;
     line-height: 20px;
     list-style: none;
+    position: relative;
+    margin-top: 20px;
+    padding-left: 37px;
   }
-  .company-delivery li::before{
+  .company-delivery li::before {
+    content: "";
+    position: absolute;
     width: 25px;
     height: 2px;
     background-color: #ee3643;
+    left: 0;
+    top: 8px;
   }
   .about-company a {
+    border-radius: 3px;
+
     font-size: 14px;
     color: #fff;
-    background-color: #ff5357;
+    background-color: #ee3643;
+    padding: 10px 40px;
+    display: inline-block;
+    margin-top: 40px;
+
   }
   .contants {
     color: #000;
@@ -443,9 +627,8 @@
     font-size: 13px;
     line-height: 24px;   
     font-family: "PT Sans", Arial, sans-serif;
-    margin-top: 32px;
-    margin-bottom: 34px;
-
+    margin: 0; 
+    margin-bottom: 30px;
   }
   .contants button[type="button"] {
     font-size: 14px;
@@ -457,27 +640,44 @@
     margin-top: 40px;
     width: 300px;
     min-height: 38px; 
+    display: block;
+    border-radius: 3px;
   }
   .top-footer {
     background-color: #32425c;
 
   }
+  .footer-logo {
+    width: 220px;
+    height: 68px;
+    display: flex;
+    background-color: #ee3643; 
+    box-shadow: inset 0 -5px 0 0 #b52933;
+    /* А сдесь лучше как сделать тенью или border-bottom и т.п. ? */
+  }
   .top-footer img {
     text-align: center;
-    background-color: #ee3643;    
+    margin: auto;   
+  }
+  .footer-info-contats {
+    margin-top: 32px;
   }
   .top-footer address {
     font-size: 18px;
     line-height: 24px;
     color:#f3f7f9;
     font-style: normal;
+    
   }
-
-  .footer-nav-top li {
+  .footer-nav li {
     list-style: none;
   }
-  .footer-nav-bottom li {
-    list-style: none;  
+  .footer-nav a {
+    padding: 21px 30px;
+    display: block;
+  }
+  .footer-nav-bottom li:first-child {
+    padding-left: 22px;
   }
   .footer-nav-top a {
     line-height: 24px;
@@ -490,8 +690,10 @@
   .footer-nav-top a:focus {
     color: rgba(241, 245, 247, 0.5);
   }
-    .top-footer span a {
+  .footer-info-contats a {
     color: #f3f7f9;
+    font-size: 18px;
+    line-height: 24px;
   }
   .footer-nav-bottom a {
     line-height: 24px;
@@ -513,14 +715,84 @@
     color: #fff;
     font-size: 16px;
   }
-  .footer-social li {
+  .footer-social ul {
     list-style: none;
   }
-  .footer-social a {
-    background-color: #212a3a;
+  /* 1-вариант */
+  .footer-social li {
     width: 42px;
-    min-height: 42px;
+    height: 42px;
+    background-color: #212a3a;
+    display: flex;  
+    border-radius: 20px;     
   }
+  .social-button {
+    width: 42px;
+    height: 42px;
+  }
+  .social-button-vk {
+    content: "";
+    width: 26px;
+    height: 15px;
+    background-image: url("../img/vk-icon.svg");
+    margin: auto;
+  }  
+  .social-button-fb {
+    content: "";
+    width: 12px;
+    height: 22px;
+    background-image: url("../img/fb-icon.svg");
+    margin: auto;
+  }  
+  .social-button-insta {
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/insta-icon.svg");
+    margin: auto;
+  }    
+  /* --------- */
+
+/*  2-вариант */
+  /* .footer-social li {
+    background-color: #212a3a;
+    border-radius: 20px;    
+    position: relative;
+  }
+  .social-button {
+    width: 42px;
+    height: 42px;
+  }
+  .social-button-vk::after {
+    content: "";
+    width: 26px;
+    height: 15px;
+    background-image: url("../img/vk-icon.svg");
+    position: absolute;
+    left: 8px;
+    top: 14px;
+  }  
+  .social-button-fb::after {
+    content: "";
+    width: 12px;
+    height: 22px;
+    background-image: url("../img/fb-icon.svg");
+    position: absolute;
+    left: 15px;
+    top: 11px;
+  }  
+  .social-button-insta::after {
+    content: "";
+    width: 21px;
+    height: 21px;
+    background-image: url("../img/insta-icon.svg");
+    position: absolute;
+    left: 11px;
+    top: 10px;
+  }  */
+/* ----------- */
+
+
   .footer-connection a {
     color: #ffd180;
     line-height: 24px;
@@ -532,10 +804,8 @@
   .footer-connection a:focus {
     color: #ee3643;
   }
-  .footer-social a:hover {
-    background-color: #ee3643;
-  }
-  .footer-social a:focus {
+  .footer-social li:hover,
+  .footer-social li:focus {
     background-color: #ee3643;
   }
   .footer-copyright a {
@@ -553,7 +823,7 @@
     line-height: 21px;
     color: #000;
     background-color: #fff; 
-    font-style: 400px;
+    font-weight: 400px;
   }
   .header-down .login:hover {
 
@@ -563,6 +833,7 @@
   }
   .header-down li {
     list-style: none;
+    position: relative;
   }
   .my-orders a {
     color: #32425c;
@@ -598,11 +869,13 @@
   }
   
   .contants-1 h2 {
+    text-transform: uppercase;
     color: #000;
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 30px;
     line-height: 30px;
     margin: 0;
+    margin-bottom: 32px;
   } 
   .main-main .catalog {
     color: #32425c;
@@ -611,10 +884,6 @@
     height: 89px;
     margin: 20px 0;
     text-transform: uppercase;
-  }
-  .main-main .catalog1 {
-    color: #32425c;
-
   }
   .bg-sorting {
     background-color: #f7f3ec;
@@ -829,15 +1098,35 @@
     min-height: 410px;     
   }
   .card {
+    position: relative;
     width: 300px;
-  /* Временно для сетки */    
     min-height: 123px; 
   }
   .slider {
+    position: relative;
     width: 620px;
-    margin-top: 20px;
-  /* Временно для сетки */    
+    margin-top: 20px;  
     min-height: 266px; 
+  }
+  .icon-left {
+    position: absolute;
+    width: 22px;
+    height: 40px;
+    background: none;
+    border: none;
+    background-image: url("../img/icon-left.svg");
+    left: 25px;
+    top: 114px;
+  }
+  .icon-right {
+    position: absolute;
+    width: 22px;
+    height: 40px;
+    background: none;
+    border: none;
+    background-image: url("../img/icon-right.svg");
+    right: 20px;
+    top: 114px;
   }
   .slider-2 {
     width: 620px;
@@ -953,6 +1242,7 @@
   /* ---------5-main------------ */ 
   .about-company {
     width: 525px;
+    position: relative;
 
   /* Временно для сетки */    
     min-height: 370px;   
@@ -995,37 +1285,31 @@
   }
   .footer-down .container {
     display: flex;
+    padding-top: 35px;
   }
   .company-yer {
     width: 240px;
-    margin-right: 150px;
-  /* Временно для сетки */    
-  min-height: 107px;     
+    margin-right: 150px;    
   }
   .footer-social {
     margin: 0;
     margin-right: 120px;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
       
     list-style: none;
 
     width: 130px;
     
-  /* Временно для сетки */    
-    min-height: 107px;  
   }
   .footer-connection {
-    width: 140px;
-
-  /* Временно для сетки */    
-  min-height: 107px;    
+    width: 140px;   
   }
   .footer-copyright {
     width: 110px;
 
-    margin-left: auto;
-  /* Временно для сетки */    
-    min-height: 107px;    
+    margin-left: auto;  
   } 
   .contants-info {
     width: 330px;
@@ -1033,20 +1317,21 @@
     min-height: 70px;  
   }
   .footer-nav {
-    width: 550px;
+    width: 620px;
   /* Временно для сетки */    
-  min-height: 193px; 
-  margin-left: auto;    
+  min-height: 193px;     
   }
   .footer-nav-top {
-    display: flex;    
+    display: flex;
+    flex-wrap: wrap;    
     margin: 0;
     padding: 0;
       
     list-style: none;    
   }
   .footer-nav-bottom {
-    display: flex;    
+    display: flex;  
+    flex-wrap: wrap;  
     margin: 0;
     padding: 0;
       
@@ -1065,6 +1350,8 @@
     padding: 0;
     width: 240px;
     min-height: 185px;
+    margin-right: 80px;
+
   }
   /* .header-top ul {
     margin: 0;
@@ -1073,15 +1360,14 @@
   .account {
     margin-left: auto;
   }
-  /* .service-delivery {
-    background-image: url("../img/service-delivery.png");
-    background-repeat: no-repeat;
-  } */
   .service-delivery {
     position: relative;
-    width: 275px;
-
-
+  }
+  .service-warranty {
+    position: relative;
+  }
+  .service-credit {
+    position: relative;
   }
   .service-delivery::after {
     content: "";
@@ -1090,21 +1376,44 @@
     background-repeat: no-repeat;
     width: 468px;
     height: 261px;
-    top: 0;
-    left: 140px;
+    top: 21px;
+    left: 239px;
   }
-
-
-
-
-  .service-warranty {
+  .service-warranty::after {
+    content: "";
+    position: absolute;
     background-image: url("../img/service-warranty.png");
     background-repeat: no-repeat;
+    width: 389px;
+    height: 283px;
+    top: 0;
+    left: 240px;
   }
-  .service-credit {
+  .service-credit::after {
+    content: "";
+    position: absolute;
     background-image: url("../img/service-credit.png");
     background-repeat: no-repeat;
+    width: 465px;
+    height: 285px;
+    top: 0;
+    left: 151px;
   }
+  .service-delivery p {
+    max-width: 275px;
+  }
+  .service-warranty p {
+    max-width: 379px;
+  }
+  .service-credit p {
+    max-width: 280px;
+  }
+
+
+
+
+
+
   /*-------Временно ------- */  
   .breadcrumbs {
     padding: 0;
