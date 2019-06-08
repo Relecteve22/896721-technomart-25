@@ -10,21 +10,27 @@
   </head>
   <body>
     <header class="main-header">
-        <div class="index-header">
-          <div class="container">
-            <a class="main-header-logo">
-              <img src="img/logo.svg" alt="Логотип Техномарт">
-            </a>
-            <div class="menu">
-              <form action="https://echo.htmlacademy.ru" method="get">
-                <input class="header-search" type="search" name="search" aria-label="Поиск"  placeholder="Поиск:">
-              </form>
-              <span class="bookmarks"><a href="bookmarks.html">Закладки: 0</a></span>
-              <span class="basket"><a href="basket.html">Корзина: 0</a></span>
-              <span class="checkout"><a href="checkout.html">Оформить заказ</a></span>            
-            </div>
-          </div>  
-        </div>
+      <div class="index-header">
+        <div class="container">
+          <a class="main-header-logo">
+            <img src="img/logo.svg" alt="Логотип Техномарт">
+          </a>
+          <div class="menu">
+            <form action="https://echo.htmlacademy.ru" method="get">
+              <!-- <input class="header-search" type="search" name="search" aria-label="Поиск"  placeholder="Поиск:"> -->
+              <label class="search">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                  <path fill="#231F20" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z"/>
+                </svg>     
+                <input class="header-search" type="search" name="search" aria-label="Поиск"  placeholder="Поиск:">           
+              </label>
+            </form>
+            <span class="bookmarks"><a href="bookmarks.html">Закладки: 0</a></span>
+            <span class="basket"><a href="basket.html">Корзина: 0</a></span>
+            <span class="checkout"><a href="checkout.html">Оформить заказ</a></span>            
+          </div>
+        </div>  
+      </div>
         <div class="header-down container">
           <div class="header-info">
             <h1 class="about-company-h1">
@@ -32,12 +38,24 @@
                 строительных материалов
                 и инструментов для ремонта
             </h1>
-            <div>
-              <span class="phone"><a href="tel:+78125550555">+7(812)555-05-55</a></span><br>
+            <div class="info-contats">
+              <span class="phone"><a href="tel:+78125550555">+7(812)555-05-55</a></span>
               <address class="address-small">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
             </div>
             <ul class="join-reg">
-              <li class="join"><a href="join.html">Войти</a></li>
+              <li class="join">
+                <a href="join.html">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     width="20px" height="17px" viewBox="0 0 20 17" enable-background="new 0 0 20 17" xml:space="preserve">
+                  <g>
+                    <polygon fill="#32425C" points="14.875,8.5 6,0 6,6 0,6 0,11 6,11 6,17 	"/>
+                  </g>
+                  <path fill="#32425C" d="M16.986,15.01h-5.027V17h5.027c2.178,0,3.004-1.81,3.029-3.026V3.028C19.99,1.811,19.164,0,16.986,0h-5.027
+                    v1.99h5.027c0.839,0,0.992,0.681,1.01,1.057v10.904C17.979,14.327,17.825,15.01,16.986,15.01z"/>
+                  </svg>                  
+                Войти
+              </a>
+              </li>
               <li class="register"><a href="registration.html">Регистрация</a></li>              
             </ul>
           </div>
@@ -63,17 +81,21 @@
                 <a href="catalog.html">На любой вкус</a> 
               </div>
               <div class="card instruments">
-                <span>Инструменты</span>
+                <span>Инструмент</span>
                 <a href="catalog.html">На все случаи</a>              
               </div>
               <div class="slider slider-1">
                 <span>Перфораторы</span>
                 <p>Настоящие мужские игрушки</p>
-                <a href="catalog.html">Открыть каталог</a>              
+                <button class="icon-left" type="button" aria-label="Переключить слайдер влево"><span class="visually-hidden">Переключить слайдер влево</span></button>         
+                <button class="icon-right" type="button" aria-label="Переключить слайдер вправо"><span class="visually-hidden">Переключить слайдер вправо</span></button>         
+                <a href="catalog.html">Открыть каталог</a>  
               </div>
               <div class="slider slider-2">
                 <span>Дрели</span>
                 <p>Соседям на радость!</p>
+                <button class="icon-left" type="button" aria-label="Переключить слайдер влево"><span class="visually-hidden">Переключить слайдер влево</span></button>         
+                <button class="icon-right" type="button" aria-label="Переключить слайдер вправо"><span class="visually-hidden">Переключить слайдер вправо</span></button>         
                 <a href="catalog.html">Открыть каталог</a>              
               </div> 
             </div>
@@ -162,6 +184,7 @@
           <div class="container">
             <div class="bg-popular-items">
               <h2 class="catalog1">Популярные производители:</h2>
+              <!-- Почему у кнопки высота большая? -->
               <a href="catalog-manufactures.html">Все производители</a>            
             </div>
               <ul class="mini-catalog-manufactures">
@@ -266,6 +289,7 @@
                 <li>Автотрейдинг</li>
                 <li>ЖелДорЭкспедиция</li>
               </ul> 
+              <!-- А как этот блок протолкнуть вниз? -->
               <a href="of-company.html">Подробнее о компании</a>              
             </section>
             <section class="contants">
@@ -283,12 +307,14 @@
           <div class="top-footer">
             <div class="container">
               <div class="contants-info">  
-                <a>
-                  <img src="img/logo.svg" width="100" height="50" alt="Логотип Техномарт">
+                <a class="footer-logo">
+                  <img src="img/logo.svg" width="138" height="23" alt="Логотип Техномарт">
                 </a>
-                  <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address><br>
+                <div class="footer-info-contats">
+                  <address>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</address>
                   <span><a href="tel:+78125550555">+7(812)555-05-55</a></span>                  
-              </div>
+                </div>
+                </div>
               <div class="footer-nav">
                 <ul class="footer-nav-top">
                   <li><a href="company.html">Компания</a></li>
@@ -313,17 +339,17 @@
                   <span>Все права защищены</span>            
                 </div>
                 <ul class="footer-social">
-                  <li><a class="social-button" href="vk.com"><span class="visually-hidd-en">Вконтакте</span></a></li>
-                  <li><a class="social-button" href="facebook.com"><span class="visually-hidde-n">Фейсбук</span></a></li>
-                  <li><a class="social-button" href="instagram.com"><span class="visually-hid-den">Инстаграм</span></a></li>
+                  <li><a class="social-button social-button-vk" href="vk.com"><span class="visually-hidden">Вконтакте</span></a></li>
+                  <li><a class="social-button social-button-fb" href="facebook.com"><span class="visually-hidden">Фейсбук</span></a></li>
+                  <li><a class="social-button social-button-insta" href="instagram.com"><span class="visually-hidden">Инстаграм</span></a></li>
                 </ul>
                 <div class="footer-connection">
                   <span>Обратная связь:</span><br>
                   <a href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>            
                 </div>
                 <div class="footer-copyright">
-                  <span>Разработано:</span> <br>
-                  <a href="https://htmlacademy.ru">HTML Academy</a>
+                  <span>Разработано —</span> <br>
+                  <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
                 </div>
               </div>
             </div>   
