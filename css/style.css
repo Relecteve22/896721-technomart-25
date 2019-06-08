@@ -105,9 +105,7 @@
   .main-header a {
     color: #fff;  
   }
-  .bookmarks a {
-    padding-top:14px ;   
-    padding-bottom: 14px;  
+  .bookmarks a {  
     padding-left: 44px; 
     padding-right: 28px;  
   }
@@ -1526,4 +1524,8 @@
   }
   .information {
     display: flex;
+  }
+  .button-join:hover path,
+  .button-join:hover polygon {
+    opacity: 1; 
   }
