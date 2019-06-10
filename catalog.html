@@ -78,23 +78,31 @@
             <form action="https://echo.htmlacademy.ru" method="get">
               <fieldset>
                 <legend>Цена:</legend>
-                <div class="half-width output-area">
-                  <output name="ratingoutput">0</output>
+                <div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="range-toggle range-toggle-min"></div>
+                  <div class="range-toggle range-toggle-max"></div>
                 </div>
-                <div class="half-width output-area">
-                  <output name="ratingoutput">30000</output>
+                <div class="price-controls">
+                  <input type="text" name="min-price" value="0"></input>
+                  <input type="text" name="max-price" value="30000"></input>
                 </div>
               </fieldset>
               <fieldset>
                 <legend>Производители:</legend>
                 <ul>
                   <li>
-                    <input type="checkbox" name="bosch" id="filter-bosch" checked> 
+                    <input type="checkbox" name="bosch" id="filter-bosch" checked class="visually-hidden"> 
                     <label for="filter-bosch">Bosch</label> 
                   </li>
                   <li>
-                    <input type="checkbox" name="interskoll" id="filter-interskol">
-                    <label for="filter-interskol">Интерскол</label>
+                    <label for="filter-interskol">
+                      <input type="checkbox" name="interskoll" id="filter-interskol" class="visually-hidden">
+                      
+                      Интерскол
+                    </label>
                   </li>
                   <li>
                     <input type="checkbox" name="makita" id="filter-makita" checked>
@@ -134,23 +142,40 @@
                 <li class="candlelight-true"><a href=#>По цене</a></li>
                 <li class="candlelight-false"><a href=#>По типу</a></li>
                 <li class="candlelight-false"><a href=#>По функционалу</a></li>
+                <li>
+                  <a href=#>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                      <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                    </svg>                    
+                  </a>
+                </li>
+                <li>
+                  <a href=#>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                      <path fill="#231F20" d="M5.5 10L0 0h11"/>
+                    </svg>
+                  </a>
+                </li>   
               </ul>
             </div>
             <ul class="catalog-items">
               <li class="catalog-item">
-                <h3 class="catalog-item-title">Перфоратор BOSCH BFG 3000</h3>
                 <p class="catalog-item-image">
-                  <img src="img/product-2.jpg" alt="Перфоратор BOSCH BFG 3000" width="218" height="170">              
+                  <img src="img/product-3.jpg" alt="Перфоратор BOSCH BFG 6000" width="218" height="170">              
                 </p>
+                <h3 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h3>
                 <p class="catalog-item-price">
-                  <span class="del-price">22500 Р.</span><br>
-                  <span class="stock-item">15500 Р.</span>
+                  <span class="del-price">30500 Р.</span>
+                  <span class="stock-item">25500 Р.</span>
                 </p>
                 <div class="buy-in-cart">
                   <span class="buy"><a href="buy.html">Купить</a></span>
                   <span class="in-cart"><a href="basket.html">В закладки</a></span>
-                </div>
+                </div>              
               </li>
+
+
+
               <li class="catalog-item">
                 <h3 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h3>
                 <p class="catalog-item-image">
@@ -180,10 +205,10 @@
                 </p>
               </li>
               <li class="catalog-item">
-                <h3 class="catalog-item-title">Перфоратор BOSCH BFG 3000</h3>
                 <p class="catalog-item-image">
                   <img src="img/product-2.jpg" alt="Перфоратор BOSCH BFG 3000" width="218" height="170">              
                 </p>
+                <h3 class="catalog-item-title">Перфоратор BOSCH BFG 3000</h3>
                 <p class="catalog-item-price">
                   <span class="del-price">22500 Р.</span><br>
                   <span class="stock-item">15500 Р.</span>
@@ -194,14 +219,12 @@
                 </div>
               </li>
               <li class="catalog-item">
-                <a href="catalog-item.html">
-                  <h3 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h3>
-                </a>
                 <p class="catalog-item-image">
                   <a href="catalog-item.html">
                     <img src="img/product-3.jpg" alt="Перфоратор BOSCH BFG 6000" width="218" height="170">              
                   </a>
                 </p>
+                <h3 class="catalog-item-title">Перфоратор BOSCH BFG 6000</h3>
                 <p class="catalog-item-price">
                   <span class="del-price">30500 Р.</span><br>
                   <span class="stock-item">25500 Р.</span>
@@ -212,14 +235,12 @@
                 </div>
               </li>
               <li class="catalog-item">
-                <a href="catalog-item.html">
-                  <h3 class="catalog-item-title">Перфоратор BOSCH BFG 2000</h3>
-                </a>
                 <p class="catalog-item-image">
                   <a href="catalog-item.html">
                     <img src="img/product-4.jpg" alt="Перфоратор BOSCH BFG 2000" width="218" height="170">              
                   </a>
                 </p>
+                <h3 class="catalog-item-title">Перфоратор BOSCH BFG 2000</h3>
                 <p class="catalog-item-price">
                   <span class="stock-item">25500 Р.</span>
                 </p>
