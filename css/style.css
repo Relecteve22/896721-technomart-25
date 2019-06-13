@@ -847,14 +847,14 @@ input[type="radio"].visually-hidden {
 
   list-style: none;
 }
-.catalog-item-image { 
+.catalog-item-image {
+  height: 170px; 
   margin: 0;
-  margin-bottom: 10px;
 }
 .catalog-item h3 {
-  height: 33px;
   padding: 0 25px;
   margin: 0;
+  margin-top: 8px;
 
   font-family: "PT Sans", Arial, sans-serif;
   font-weight: bold;
@@ -874,8 +874,7 @@ input[type="radio"].visually-hidden {
   height: 100px;
 }
 .del-price {
-  display: block;  
-  margin-top: 15px;
+  margin-top: 10px;
 
   font-family: "PT sans", Arial, sans-serif;    
   line-height: 18px;
@@ -887,13 +886,12 @@ input[type="radio"].visually-hidden {
 .stock-item {    
   position: relative;
 
-  display: block;      
   width: 80px;    
   padding: 10px 30px;
   margin-left: auto;
   margin-right: auto;
   margin-top: auto;    
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 
 
   font-family: "PT sans", Arial, sans-serif;    
@@ -964,10 +962,6 @@ input[type="radio"].visually-hidden {
 .mini-catalog-manufactures li:nth-child(n+5) {
   margin-bottom: 0   
 }
-
-
-
-
 .catalog-service {
   background-color: #f5f8fa;
   margin-bottom: 75px; 
@@ -976,7 +970,6 @@ input[type="radio"].visually-hidden {
 /* Временно для сетки */    
   min-height: 525px;   
 }
-
 .catalog-service h2 {
   margin: 0;
   margin-top: 65px;
@@ -1955,7 +1948,9 @@ input[type="radio"].visually-hidden {
 
 }
 .catalog-item:hover .buy-in-cart {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .choose-catalog-item .buy-in-cart {
   display: block;
