@@ -7,6 +7,10 @@ body {
 
   background-color: #fff;
 }
+html { 
+  -webkit-box-sizing: border-box; 
+          box-sizing: border-box; 
+}
 a {
   text-decoration: none;
 } 
@@ -106,12 +110,18 @@ input[type="radio"].visually-hidden {
 .header-search::placeholder {
   color: #fff;
 } 
-.header-search:focus + svg path {
-  fill: #ee3643;
-} 
-.header-search:focus + svg {
+.header-search:hover + svg path {
+  fill: #fff;
+}
+.search:hover + svg {
   opacity: 1;
 }
+.header-search:focus + svg path {
+  fill: #ee3643;
+}
+.header-search:focus + svg {
+opacity: 1;
+  }
 .header-search:hover {
   background-color: #212a3a;
 }
@@ -248,11 +258,11 @@ input[type="radio"].visually-hidden {
 }
 .about-company-h1 {
   width: 210px;
-  min-height: 70px;  
+  /* min-height: 70px;   */
   margin: 0;
   margin-right: 70px; 
   margin-top: 8px;
-  padding-left: 52px;
+  padding-left: 55px;
     
   font-weight: normal;
   color: #ee3643;
@@ -454,11 +464,11 @@ input[type="radio"].visually-hidden {
 }
 .main-nav {
   width: 940px;    
-  min-height: 60px;    
+  min-height: 60px;  
+  margin-top: 40px;  
 }
 .main-nav ul {
   margin: 0;
-  margin-top: 42px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -566,13 +576,16 @@ input[type="radio"].visually-hidden {
 }
 .card a {
   display: inline-block;
-  padding: 12px 24px;
+  width: 135px;  
+  padding: 12px 0;
   margin-top: 15px;
   margin-left: 25px;
 
+  vertical-align: top;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;
+  text-align: center;
   color: #fff;
 
   background-color: rgba(0, 0, 0, 0.1); 
@@ -604,15 +617,48 @@ input[type="radio"].visually-hidden {
   padding: 0;
 }
 .slider-controls li {
-  list-style: none;
-}
-.slider-controls button {
   position: absolute;
+  bottom: 36px;
 
   width: 10px;
   height: 10px;
 
-  background-image: url("");
+  list-style: none;
+}
+.slider-control {
+  position: relative;
+
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin: 0;
+
+  border: none;
+  background-color: transparent;  
+}
+.first-slider-control {
+  left: 295px;
+}
+.second-slider-control {
+  left: 315px;
+}
+.slider-controls .slider-control::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 6px;
+  height: 6px;
+
+  background: #fff;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+.slider-control-active {
+  background: #ee3643;
 }
 .icon-left {
   position: absolute;
@@ -697,23 +743,27 @@ input[type="radio"].visually-hidden {
 }
 .discount {
   background-color: #8ed78f;
- }
+}
 .delivery {
   background-color: #ffc047;
 }
 .buy a {
-  background-color: #63a63e;
-  font-size: 14px; 
-  color: #fff;
+  position: relative;
+
+  display: inline-block;  
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 50px;
   padding-right: 45px;
-  display: inline-block;
+
+  font-size: 14px; 
+  color: #fff;
+  vertical-align: top;
+
+  background-color: #63a63e;
   border-radius: 3px;
   -webkit-box-shadow: inset 0px -3px 0 0 #367315;
           box-shadow: inset 0px -3px 0 0 #367315;
-  position: relative;
 }
 .buy a::before {
   content: "";
@@ -748,6 +798,7 @@ input[type="radio"].visually-hidden {
   padding-right: 30px;
   margin-top: 7px;
 
+  vertical-align: top;
   font-size: 14px; 
   color: #32425c;
 
@@ -771,12 +822,15 @@ input[type="radio"].visually-hidden {
           box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 .popular-manufacturers h2 {
+  display: inline-block;
   margin: 0;
-  color: #32425c;
+  padding-left: 30px;
+
   font-size: 30px;
   line-height: 30px;
-  padding-left: 30px;
-  text-transform: uppercase;
+  font-weight: 400;
+  text-transform: uppercase;  
+  color: #32425c;
 }
 .popular-items .container {
   width: 940px;
@@ -786,21 +840,27 @@ input[type="radio"].visually-hidden {
   min-height: 427px;       
 }
 .popular-items h2 {
+  display: inline-block;
   margin: 0;
-  color: #32425c;
+  margin-left: 30px;
+
   font-size: 30px;
   line-height: 30px;
-  padding-left: 30px;
-  text-transform: uppercase;
+  font-weight: 400;
+  vertical-align: middle;
+  text-transform: uppercase; 
+  color: #32425c;
 }
 .bg-popular-items a {
-  display: block;
+  display: inline-block;
+  width: 253px;
   margin-left: auto;
-  margin-right: 24px;
-  padding: 10px 70px;
+  margin-right: 25px;
+  padding: 10px 0;
 
   font-size: 14px;
   text-transform: uppercase;
+  text-align: center;
   color: #fff;
 
   background-color: #ee3643;
@@ -815,13 +875,10 @@ input[type="radio"].visually-hidden {
 .bg-popular-items {    
   display: -webkit-box;    
   display: -ms-flexbox;    
-  display: flex; 
+  display: flex;
   width: 940px;
-  min-height: 89px;  
+  padding: 25px 0;
   margin-bottom: 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 
   -webkit-box-align: center;
 
@@ -979,6 +1036,7 @@ input[type="radio"].visually-hidden {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #000;
 }
@@ -1036,6 +1094,8 @@ input[type="radio"].visually-hidden {
 
   background-color: #32425c;
   border: none;
+  border-top: 1px solid #405069;
+  border-bottom: 1px solid #293449;
 }
 .catalog-service button[type="button"]:hover {
   background-color: #293449;
@@ -1062,6 +1122,7 @@ input[type="radio"].visually-hidden {
   display: inline-block;
   padding: 10px 45px;
 
+  vertical-align: top;
   font-size: 14px;
   text-transform: uppercase;
   color: #fff;
@@ -1078,6 +1139,7 @@ input[type="radio"].visually-hidden {
 
   font-size: 36px;
   line-height: 36px;
+  font-weight: 400;
   text-transform: uppercase; 
   color: #32425c;
 }
@@ -1193,6 +1255,7 @@ input[type="radio"].visually-hidden {
   font-family: "Cuprum", Arial, sans-serif;   
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   color: #000;
 }
@@ -1230,8 +1293,10 @@ input[type="radio"].visually-hidden {
   padding: 10px 0;
   margin-top: 40px;    
 
+  vertical-align: top;
   font-size: 14px;
-  text-align: center;    
+  text-align: center;  
+  text-transform: uppercase; 
   color: #fff;
 
   background-color: #ee3643; 
@@ -1257,6 +1322,8 @@ input[type="radio"].visually-hidden {
   font-family: "Cuprum", Arial, sans-serif;
   font-size: 30px;
   line-height: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
 }
 .contants p {
   margin: 0; 
@@ -1273,9 +1340,9 @@ input[type="radio"].visually-hidden {
   padding: 10px 60px;
   margin-top: 40px;
 
-  font-size: 14px;
-  line-height: 18px; 
   font-family: "Cuprum", Arial, sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
   color: #fff;
 
   background-color: #ee3643;
@@ -1326,9 +1393,9 @@ input[type="radio"].visually-hidden {
   /* А сдесь лучше как сделать тенью или border-bottom и т.п. ? */
 }
 .top-footer img {
-  text-align: center;
-
-  margin: auto;   
+  width: 138px;
+  height: 23px;
+  margin: auto;
 }
 .footer-info-contats {
   margin-top: 32px;
@@ -1578,6 +1645,9 @@ input[type="radio"].visually-hidden {
   margin: 20px 0;
 
   text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
   color: #32425c;    
 
   background-color: #f2f6f8;
@@ -1606,6 +1676,7 @@ input[type="radio"].visually-hidden {
   padding-left: 18px;
 
   font-size: 13px;
+  font-weight: 400;
   line-height: 18px;
 
   background-color: #f7f3ec;
@@ -1852,6 +1923,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
 
   font-family: "PT Sans", Arial, sans-serif;
+  font-weight: 400;
   font-size: 13px;
   line-height: 18px;
   color: #000;
@@ -1948,9 +2020,13 @@ input[type="radio"].visually-hidden {
 
 }
 .catalog-item:hover .buy-in-cart {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .choose-catalog-item .buy-in-cart {
   display: block;
@@ -2023,11 +2099,13 @@ input[type="radio"].visually-hidden {
   padding-top: 65px;
   margin-bottom: 28px;
   margin: 0;
-  color: #000;
+
+  font-family: "Cuprum", Arial, sans-serif;  
   font-size: 30px;
   line-height: 30px;
-  font-family: "Cuprum", Arial, sans-serif;
+  font-weight: 400;
   text-transform: uppercase; 
+  color: #000;
 }
 .about-perforators p  { 
   margin: 0;
@@ -2256,6 +2334,8 @@ input[type="radio"].visually-hidden {
   bottom: 200px;
   
   margin-left: -470px;
+
+  background-color: #000;
 }
 .menu {
   display: -webkit-box;
@@ -2366,6 +2446,8 @@ input[type="radio"].visually-hidden {
   color: #32425c;
 
   background-color: #fff;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 /* Илья Филонов, Верстайте пока с pixel-perfect, чтобы научиться это делать, но допускайте % отклонения от макета в тех местах. Я больше про отступы. Размер шрифтов стоит подбирать как в макете. Когда текст в 2 строки - не имеет смысла буква в букву лепить. Можно оставить погрешность. Подумайте что будет если в то место добавить больше текста. */
 /* Илья Филонов, Главное чтобы в верстке типичные элементы выглядили одинаково. Межстрочный интервал, размер текста (например если это заголовок h2 в названии продукта, он везде должен быть одинаковым, для каждого продукта). Если тень падает у картинки на 45% влево вниз, то она для всех картинок должна так падать */
