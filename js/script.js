@@ -1,7 +1,11 @@
     var ButtonWriteUs = document.querySelector(".button-write-us");
+    var ButtonMap = document.querySelector(".mini-map");
+    // var ButtonBuy = document.querySelector("[href=buy.html]");
 
     var popup = document.querySelector(".write-us");
+    var map = document.querySelector(".main-map");
     var close = popup.querySelector(".leave");
+    var mapClose = map.querySelector(".leave");
 
     var form = popup.querySelector("form");
     var nameSurname = popup.querySelector("[name=name-surname]");
@@ -30,6 +34,12 @@
         nameSurname.focus();
     });
 
+    ButtonMap.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        map.classList.add("modal-show");
+    });
+
+
     close.addEventListener("click", function (evt) {
         evt.preventDefault();
         popup.classList.remove("modal-show");
@@ -49,6 +59,11 @@
         }
     });
 
+    mapClose.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        map.classList.remove("modal-show");
+    });
+
     form.addEventListener("submit", function (evt) {
         if (!nameSurname.value || !email.value || !textPost.value) {
             evt.preventDefault();
@@ -56,5 +71,23 @@
             if (isStorageSupport) {
                 localStorage.setItem("nameSurname", nameSurname.value);
               }
+        }
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+          }
+        }
+      });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (map.classList.contains("modal-show")) {
+            map.classList.remove("modal-show");
+          }
         }
       });
