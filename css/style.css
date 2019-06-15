@@ -257,14 +257,14 @@
     min-height: 70px;   
   }
   .about-company-h1 {
-    width: 210px;
+    width: 198px;
     /* min-height: 70px;   */
     margin: 0;
     margin-right: 70px; 
-    margin-top: 8px;
-    padding-left: 55px;
+    margin-top: 3px;
+    padding-left: 53px;
       
-    font-weight: normal;
+    font-weight: 400;
     color: #ee3643;
     font-style: italic;
     font-size: 16px;
@@ -273,8 +273,8 @@
   .phone {
     padding-top: 10px;
     padding-bottom: 10px;
-    padding-right: 50px;
-    padding-left: 75px;
+    /* padding-right: 50px; */
+    padding-left: 72px;
     border: 3px solid #fff;
     display: block;
   }
