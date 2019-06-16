@@ -238,6 +238,9 @@
   .active-cart {
     background-color: #ee3643;
   }
+  .active-cart a:hover {
+    background-color: #ee3643;
+  }
   .checkout a {
     display: block;
     padding: 12px 20px;
@@ -312,20 +315,26 @@
 
     margin-left: auto;
   }
+  .bg-for-name {
+    display: flex;
+    justify-content: space-between;     
+    width: 300px;     
+    
+    background-color: #fff;  
+  }
   .header-down .login {
     position: relative;
 
     display: block;
-    padding-left: 45px;
-    padding-right: 70px;
+    max-width: 220px;
     padding-top: 12px;
-    padding-bottom: 12px;
+    padding-bottom: 12px;   
+    padding-left: 45px;    
+    padding-right: 14px;
 
     font-size: 21px;
     line-height: 21px;
     color: #000;
-
-    background-color: #fff; 
   }
   .header-down .login::before {
     content: "";
@@ -347,16 +356,21 @@
     opacity: 0.3;
   }
   .account .deauthorization {
-    position: absolute;
-    top: 14px;
-    right: 10px;
+    position: relative;
+
+    width: 40px;
 
     opacity: 0.3;
   }
-  .login:hover + .deauthorization {
+  .deauthorization svg {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+  }
+  .deauthorization:hover {
     opacity: 1;
   }
-  .login:focus + .deauthorization {
+  .deauthorization:focus {
     opacity: 0.3;
   }
   .account ul {
@@ -1626,6 +1640,7 @@
   }
   .footer-connection a:focus {
     color: #ee3643;
+    text-decoration: none;
   }
   .footer-social li:hover,
   .footer-social li:focus {
@@ -1640,6 +1655,7 @@
   }
   .footer-copyright a:focus {
     color: #ee3643;
+    text-decoration: none;
   }
   .header-down .login:focus {
     color: rgba(0, 0, 0, 0.3);
