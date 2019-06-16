@@ -265,7 +265,7 @@
     padding-left: 53px;
       
     font-weight: 400;
-    color: #ee3643;
+    color: #1f1b1b;
     font-style: italic;
     font-size: 16px;
     line-height: 23px;
@@ -274,10 +274,9 @@
     padding-top: 10px;
     padding-bottom: 10px;
     /* padding-right: 50px; */
-    padding-left: 72px;
+    padding-left: 70px;
     border: 3px solid #fff;
     display: block;
-    /*  */
   }
   .phone a {
     font-size: 21px; 
@@ -414,9 +413,6 @@
     color: #000;
     background-color: #fff;
   }
-  .join {
-    position: relative;
-  }
   .join a {
     margin-right: 10px;
     display: block;
@@ -428,19 +424,25 @@
   }
   .button-join::before {
     content: "";
-    background-image: url("../img/icon-login.svg");
+
     position: absolute;
     left: 14px;
-    top: 15px;
+    top: 13px;
+
     width: 20px;
     height: 17px;
-    opacity: 0.3;
+
+    opacity: 0.3;    
+    background-image: url("../img/icon-login.svg");
   }
   .button-join:hover::before {
     opacity: 1;
   }
   .button-join:focus{
     color: #c5c5c5;
+  }
+  .register {
+    max-width: 150px;
   }
   .register a {
     display: block; 
