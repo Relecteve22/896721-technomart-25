@@ -146,10 +146,12 @@
   }
   .main-header-logo:hover {
     background-color: #ca2c37; 
+    box-shadow: 0 5px 0 0 #9a212a;    
   }
   .main-header-logo:active,
   .main-header-logo:focus  {
     background-color: #ba2732; 
+    box-shadow: 0 5px 0 0 #8e1e26;
   }
   .main-header img {
     margin: auto;
@@ -265,14 +267,14 @@
     padding-left: 53px;
       
     font-weight: 400;
-    color: #1f1b1b;
+    color: #ee3643;
     font-style: italic;
     font-size: 16px;
     line-height: 23px;
   }   
   .phone {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 9px;
+    padding-bottom: 9px;
     /* padding-right: 50px; */
     padding-left: 70px;
     border: 3px solid #fff;
@@ -294,8 +296,8 @@
     left: -59px;
   }
   .address-small {
-    padding-left: 10px;
-    margin-top: 3px;
+    padding-left: 9px;
+    margin-top: 4px;
 
     font-style: normal;
     font-size: 14px;
@@ -417,10 +419,10 @@
   .join a {
     margin-right: 10px;
     display: block;
-    padding-left: 48px;
+    padding-left: 47px;
     padding-top: 12px;
     padding-bottom: 12px;
-    padding-right: 27px;
+    padding-right: 25px;
     line-height: 21px;
   }
   .button-join::before {
@@ -439,7 +441,8 @@
   .button-join:hover::before {
     opacity: 1;
   }
-  .button-join:focus{
+  .button-join:focus,
+  .button-join:active {
     color: #c5c5c5;
   }
   .register {
@@ -452,6 +455,10 @@
     padding-bottom: 12px;
     padding-right: 25px; 
     line-height: 21px;  
+  }
+  .register a:focus,
+  .register a:active {
+    color: #c5c5c5;
   }
   .join-reg {    
     display: -webkit-box;    
@@ -467,9 +474,12 @@
     color: #ee3643;
   }
   .main-nav {
-    width: 940px;    
     min-height: 60px;  
+    padding-left: 22px;
+    padding-right: 22px;
     margin-top: 40px;  
+
+    background-color: #32425c;
   }
   .main-nav ul {
     margin: 0;
@@ -479,8 +489,6 @@
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding-left: 22px;
-    padding-right: 22px;
     background-color: #32425c;
     -webkit-box-shadow: inset 0px -5px 0 0 #293449;
             box-shadow: inset 0px -5px 0 0 #293449;
@@ -496,6 +504,8 @@
   .main-nav a {
     display: block;
     padding: 21px 30px;
+
+    line-height: 17px;
   }
   .main-nav a:hover {
     background-color:#293449;
@@ -512,7 +522,7 @@
   .card span {
     display: block;
     margin-left: 23px;
-    margin-top: 21px;
+    margin-top: 20px;
         
     font-weight: bold;
     font-size: 24px;
@@ -546,7 +556,7 @@
     content: "";
 
     position: absolute;
-    right: 28px;
+    right: 31px;
     top: 31px;
 
     width: 78px;
@@ -581,11 +591,11 @@
   .card a {
     display: inline-block;
     width: 135px;  
-    padding: 12px 0;
-    margin-top: 15px;
+    padding: 10px 0;
+    margin-top: 13px;
     margin-left: 25px;
 
-    vertical-align: top;
+    vertical-align: middle;
     font-weight: 400;
     font-size: 14px;
     text-transform: uppercase;
@@ -718,7 +728,7 @@
   .slider span {
     display: block;
     margin-left: 24px;
-    margin-top: 27px;
+    margin-top: 23px;
 
     font-size: 36px;
     line-height: 36px;
@@ -727,7 +737,7 @@
   }
   .slider p {
     margin: 0;
-    margin-top: 8px;
+    margin-top: 2px;
     margin-left: 25px;    
 
     font-size: 18px;
@@ -775,7 +785,7 @@
     font-size: 14px; 
     line-height: 18px;
     color: #fff;
-    vertical-align: top;
+    vertical-align: middle;
 
     background-color: #63a63e;
     border-radius: 3px;
@@ -815,7 +825,7 @@
     padding-right: 30px;
     margin-top: 7px;
 
-    vertical-align: top;
+    vertical-align: middle;
     font-size: 14px; 
     line-height: 18px;
     color: #32425c;
@@ -840,7 +850,6 @@
             box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
   }
   .popular-manufacturers h2 {
-    display: inline-block;
     margin: 0;
     padding-left: 30px;
 
@@ -858,19 +867,16 @@
     min-height: 427px;       
   }
   .popular-items h2 {
-    display: inline-block;
     margin: 0;
     margin-left: 30px;
 
     font-size: 30px;
     line-height: 30px;
     font-weight: 400;
-    vertical-align: middle;
     text-transform: uppercase; 
     color: #32425c;
   }
   .bg-popular-items a {
-    display: inline-block;
     width: 253px;
     margin-left: auto;
     margin-right: 25px;
@@ -1143,7 +1149,7 @@
     display: inline-block;
     padding: 10px 45px;
 
-    vertical-align: top;
+    vertical-align: middle;
     font-size: 14px;
     text-transform: uppercase;
     color: #fff;
@@ -1261,6 +1267,15 @@
   .about-company {
     position: relative; 
 
+    display: -webkit-box; 
+
+    display: -ms-flexbox; 
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 525px;
     min-height: 370px;   
 
@@ -1318,12 +1333,11 @@
     top: 8px;
   }
   .about-company a {
-    display: inline-block;
+    display: block;
     width: 220px;
     padding: 10px 0;
-    margin-top: 40px;    
+    margin-top: auto;    
 
-    vertical-align: top;
     font-size: 14px;
     text-align: center;  
     text-transform: uppercase; 
@@ -1422,6 +1436,15 @@
     -webkit-box-shadow: inset 0 -5px 0 0 #b52933; 
             box-shadow: inset 0 -5px 0 0 #b52933;
     /* А сдесь лучше как сделать тенью или border-bottom и т.п. ? */
+  }
+  .footer-logo:hover {
+    background-color: #ca2c37; 
+    box-shadow: inset 0 -5px 0 0 #9a212a;
+  }
+  .footer-logo:active,
+  .footer-logo:focus  {
+    background-color: #ba2732; 
+    box-shadow: 0 5px 0 0 #8e1e26;
   }
   .top-footer img {
     width: 138px;
@@ -1881,7 +1904,7 @@
 
     cursor: pointer;
   }  
-  .login-radio input[type="radio"] + .radio-indicator {
+  .radio-button + .radio-indicator {
     position: absolute;
     top: 0;
     left: 0;
@@ -1891,7 +1914,7 @@
     background-image: url("../img/radio-off.svg");
     opacity: 0.2;
   }
-  .login-radio input[type="radio"]:checked + .radio-indicator {
+  .radio-button:checked + .radio-indicator {
     position: absolute;
     top: 0;
     left: 0;
@@ -1902,18 +1925,18 @@
     background-image: url("../img/radio-on.svg");
     opacity: 0.2;
   }  
-  .login-radio input[type="radio"] + .radio-indicator:hover {
+  .radio-button + .radio-indicator:hover {
     opacity: 0.3;
   }
-  .login-radio input[type="radio"]:checked + .radio-indicator:hover  {
+  .radio-button:checked + .radio-indicator:hover  {
     opacity: 0.3;
   }  
-  .login-radio input[type="radio"] + .radio-indicator:disabled{
+  .radio-button:disabled + .radio-indicator {
     opacity: 0.1;
   }
-  .login-radio input[type="radio"]:checked + .radio-indicator:disabled  {
+  .radio-button:disabled + .radio-indicator + .type-battery {
     opacity: 0.1;
-  } 
+  }
   .filter button[type="submit"] {
     background-color: #fff;
     border: 1px solid #e5e5e5;
@@ -1982,30 +2005,30 @@
   }
   .bg-sorting a {
     color: rgba(50, 66, 92, 0.3);
-    -webkit-text-decoration-color: #ee3643;
-            text-decoration-color: #ee3643;
-    -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
-    -webkit-text-decoration-style: dotted;
-            text-decoration-style: dotted; 
+    border-bottom: 1px dotted #ee3643;        
     font-family: "PT Sans", Arial, sans-serif;
     font-size: 13px;     
   }
   .bg-sorting a:hover {
     color: #000;
-    -webkit-text-decoration-style: solid;
-            text-decoration-style: solid;
-            -webkit-text-decoration-line: underline;
-                    text-decoration-line: underline;
-            -webkit-text-decoration-color: #ee3643;
-                    text-decoration-color: #ee3643;  
+    border-bottom: 1px solid #ee3643;                    
   }
   .candlelight-true a {
     color: #ee3643;
-    text-decoration: none;
+    border-bottom: none;
+  }
+  .candlelight-true a:hover {
+    color: #ee3643;
+    border-bottom: none;
   }
   .sorting-items-price li {
     margin: 0; 
+  }
+  .sorting-items-price a {
+    border-bottom: none;
+  }
+  .sorting-items-price a:hover {
+    border-bottom: none;
   }
   .sorting-items-price path {
     fill: #c5c5c5;
@@ -2526,23 +2549,50 @@
   .modal-show {
     display: block;
 
-    animation: bounce 0.6s;
+    -webkit-animation: bounce 0.6s;
+
+            animation: bounce 0.6s;
+  }
+  @-webkit-keyframes bounce {
+    0% {
+      -webkit-transform: translateY(-2000px);
+              transform: translateY(-2000px);
+    }
+
+    70% {
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
+    }
+
+    90% {
+      -webkit-transform: translateY(-10px);
+              transform: translateY(-10px);
+    }
+
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+    }
   }
   @keyframes bounce {
     0% {
-      transform: translateY(-2000px);
+      -webkit-transform: translateY(-2000px);
+              transform: translateY(-2000px);
     }
-  
+
     70% {
-      transform: translateY(30px);
+      -webkit-transform: translateY(30px);
+              transform: translateY(30px);
     }
-  
+
     90% {
-      transform: translateY(-10px);
+      -webkit-transform: translateY(-10px);
+              transform: translateY(-10px);
     }
-  
+
     100% {
-      transform: translateY(0);
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
     }
   }
   /* Илья Филонов, Верстайте пока с pixel-perfect, чтобы научиться это делать, но допускайте % отклонения от макета в тех местах. Я больше про отступы. Размер шрифтов стоит подбирать как в макете. Когда текст в 2 строки - не имеет смысла буква в букву лепить. Можно оставить погрешность. Подумайте что будет если в то место добавить больше текста. */
