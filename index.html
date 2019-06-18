@@ -35,7 +35,7 @@
           <h1 class="about-company-h1">
             Интернет-магазин
             строительных материалов
-            и инструментов для ремонта
+            и&nbsp;инструментов для ремонта
           </h1>
           <div class="info-contats">
             <span class="phone"><a href="tel:+78125550555">+7 (812) 555-05-55</a></span>
@@ -43,7 +43,6 @@
           </div>
           <ul class="join-reg">
             <li class="join">
-              <!-- Тут костыль, строчка кода css 240 -->
               <a href="join.html" class="button-join">Войти</a>
             </li>
             <li class="register"><a href="registration.html">Регистрация</a></li>              
@@ -66,7 +65,6 @@
       <section class="middle-nav">
         <div class="container">          
           <div class="speaker-left">  
-            <!-- Как с помощью card присоединть new? -->
             <div class="card materials new">
               <span>Материалы</span>
               <a href="catalog.html">На любой вкус</a>
@@ -75,28 +73,34 @@
               <span>Инструмент</span>
               <a href="catalog.html">На все случаи</a>              
             </div>
-            <div class="slider slider-1">
-              <span>Перфораторы</span>
-              <p>Настоящие мужские игрушки</p>
-              <button class="icon-left" type="button" aria-label="Переключить слайдер влево"><span class="visually-hidden">Переключить слайдер влево</span></button>         
-              <button class="icon-right" type="button" aria-label="Переключить слайдер вправо"><span class="visually-hidden">Переключить слайдер вправо</span></button>         
+            <div class="sliders">
+              <input class="visually-hidden" type="radio" id="product-1" name="toggle">
+              <input class="visually-hidden" type="radio" id="product-2" name="toggle" checked>  
               <ul class="slider-controls">
-                <li class="first-slider-control"><button class="slider-control slider-control-active" type="button"><span class="visually-hidden">Первый</span></button></li>
-                <li class="second-slider-control"><button class="slider-control" type="button"><span class="visually-hidden">Второй</span></button></li>
-              </ul>  
-              <a href="catalog.html">Открыть каталог</a>  
+                <li class="first-slider-control">
+                  <label for="product-1" class="slider-control">
+                    <span class="visually-hidden">Первый</span>
+                  </label>
+                </li>
+                <li class="second-slider-control">
+                  <label for="product-2" class="slider-control slider-control-active">
+                    <span class="visually-hidden">Второй</span>
+                  </label>
+                </li>
+              </ul> 
+              <label for="product-1" class="icon-left" aria-label="Переключить слайдер влево"><span class="visually-hidden">Переключить слайдер влево</span></label>         
+              <label for="product-2" class="icon-right" aria-label="Переключить слайдер вправо"><span class="visually-hidden">Переключить слайдер вправо</span></label>   
+              <div class="slider slider-1" id="slide1">
+                <span>Перфораторы</span>
+                <p>Настоящие мужские игрушки</p>  
+                <a href="catalog.html">Открыть каталог</a>  
+              </div>
+              <div class="slider slider-2" id="slide2">
+                <span>Дрели</span>
+                <p>Соседям на радость!</p>               
+                <a href="catalog.html">Открыть каталог</a>              
+              </div> 
             </div>
-            <div class="slider slider-2">
-              <span>Дрели</span>
-              <p>Соседям на радость!</p>
-              <button class="icon-left" type="button" aria-label="Переключить слайдер влево"><span class="visually-hidden">Переключить слайдер влево</span></button>         
-              <button class="icon-right" type="button" aria-label="Переключить слайдер вправо"><span class="visually-hidden">Переключить слайдер вправо</span></button>    
-              <ul class="slider-controls">
-                <li class="first-slider-control"><button class="slider-control" type="button"><span class="visually-hidden">Первый</span></button></li>
-                <li class="second-slider-control"><button class="slider-control slider-control-active" type="button"><span class="visually-hidden">Второй</span></button></li>
-              </ul>     
-              <a href="catalog.html">Открыть каталог</a>              
-            </div> 
           </div>
           <div class="speaker-right">   
             <div class="card equipment">
@@ -131,7 +135,7 @@
                 <span class="stock-item">25500 Р.</span>
               </p>
               <div class="buy-in-cart">
-                <span class="buy"><a href="buy.html">Купить</a></span>
+                <span class="buy"><a class="buy-in-cart-modal" href="buy.html">Купить</a></span>
                 <span class="in-cart"><a href="basket.html">В закладки</a></span>
               </div>              
             </li>
@@ -145,7 +149,7 @@
                 <span class="stock-item">15500 Р.</span>
               </p>
               <div class="buy-in-cart">
-                <span class="buy"><a href="buy.html">Купить</a></span>
+                <span class="buy"><a class="buy-in-cart-modal" href="buy.html">Купить</a></span>
                 <span class="in-cart"><a href="basket.html">В закладки</a></span>
               </div>              
             </li>
@@ -159,7 +163,7 @@
                 <span class="stock-item">25500 Р.</span>
               </p>
               <div class="buy-in-cart">
-                <span class="buy"><a href="buy.html">Купить</a></span>
+                <span class="buy"><a class="buy-in-cart-modal" href="buy.html">Купить</a></span>
                 <span class="in-cart"><a href="basket.html">В закладки</a></span>
               </div>              
             </li>
@@ -172,7 +176,7 @@
                 <span class="stock-item">12500 Р.</span>
               </p>
               <div class="buy-in-cart">
-                <span class="buy"><a href="buy.html">Купить</a></span>
+                <span class="buy"><a class="buy-in-cart-modal" href="buy.html">Купить</a></span>
                 <span class="in-cart"><a href="basket.html">В закладки</a></span>
               </div>              
             </li>
@@ -237,12 +241,15 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.
           </p>
           <div class="information">
+            <input class="visually-hidden" type="radio" id="service-1" name="toggle-1" checked>
+            <input class="visually-hidden" type="radio" id="service-2" name="toggle-1">  
+            <input class="visually-hidden" type="radio" id="service-3" name="toggle-1">  
             <ul>
-              <li class="service choose-service"><button type="button">Доставка</button></li>
-              <li class="service"><button type="button">Гарантия</button></li>
-              <li class="service"><button type="button">Кредит</button></li>
+              <li class="service"><label for="service-1">Доставка</label></li>
+              <li class="service"><label for="service-2">Гарантия</label></li>
+              <li class="service"><label for="service-3">Кредит</label></li>
             </ul>
-            <div class="service-delivery">
+            <div class="service-delivery" id="service-slaider-1">
               <h3>Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо<br> 
                   к вашему подъезду совершенно бесплатно!
@@ -250,7 +257,7 @@
                 поднимая его на ваш этаж!
               </p>
             </div>
-            <div class="service-warranty">
+            <div class="service-warranty" id="service-slaider-2">
               <h3>Гарантия</h3>
                 <p>
                   Если купленный у нас товар поломается или заискрит,<br> 
@@ -260,7 +267,7 @@
                   Дом уж восстановите как-нибудь сами.
                 </p>
             </div>
-            <div class="service-credit">
+            <div class="service-credit" id="service-slaider-3">
               <h3>Кредит</h3>
               <p>Залезть в долговую яму стало проще!<br>
               Кредитные консультанты придут вам на помощь.
