@@ -59,14 +59,22 @@
         }
       });
     };
-  if (menuItemAddedToCart) {
-    var buttonBuyInCart = document.querySelector(".buy");
-    var closeMenuItemAddedToCart = menuItemAddedToCart.querySelector(".leave");
-    var continueShopping = menuItemAddedToCart.querySelector(".continue-shopping");
+
+    var buttonBuyInCart = document.querySelectorAll(".buy");
     buttonBuyInCart.addEventListener("click", function (evt) {
       evt.preventDefault();
       menuItemAddedToCart.classList.add("modal-show");
     });
+
+
+  if (menuItemAddedToCart) {
+
+    var closeMenuItemAddedToCart = menuItemAddedToCart.querySelector(".leave");
+    var continueShopping = menuItemAddedToCart.querySelector(".continue-shopping");
+    // buttonBuyInCart.addEventListener("click", function (evt) {
+    //   evt.preventDefault();
+    //   menuItemAddedToCart.classList.add("modal-show");
+    // });
 
     closeMenuItemAddedToCart.addEventListener("click", function (evt) {
       evt.preventDefault();
