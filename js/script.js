@@ -1,64 +1,47 @@
-    var ButtonWriteUs = document.querySelector(".button-write-us");
-    var ButtonMap = document.querySelector(".mini-map");
+    var buttonWriteUs = document.querySelector(".button-write-us");
+    var buttonMap = document.querySelector(".mini-map");
     // var ButtonBuy = document.querySelector("[href=buy.html]");
 
     var popup = document.querySelector(".write-us");
     var map = document.querySelector(".main-map");
+    var buttonBuyInCart = document.querySelector(".buy-in-cart-modal");
     var close = popup.querySelector(".leave");
     var mapClose = map.querySelector(".leave");
+    var menuItemAddedToCart = document.querySelector(".menu-item-added-to-cart");
 
     var form = popup.querySelector("form");
     var nameSurname = popup.querySelector("[name=name-surname]");
     var email = popup.querySelector("[name=email]");
     var textPost = popup.querySelector("[name=text-post]");
 
-    var isStorageSupport = true;
-    var storage = "";
-    var storage1 = "";
-    
-    try {
-      storage = localStorage.getItem("login");
-    } catch (err) {
-      isStorageSupport = false;
-    }  
+    if (popup) {
+      buttonWriteUs.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          popup.classList.add("modal-show");
+          nameSurname.focus();
+      });
+    };
 
-    try {
-        storage1 = localStorage.getItem("email");
-      } catch (err) {
-        isStorageSupport = false;
-      }  
 
-    ButtonWriteUs.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.add("modal-show");
-        nameSurname.focus();
-    });
 
-    ButtonMap.addEventListener("click", function (evt) {
+
+    buttonMap.addEventListener("click", function (evt) {
         evt.preventDefault();
         map.classList.add("modal-show");
-    });
-
-
-    close.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        popup.classList.remove("modal-show");
-
-        if (storage) {
-            nameSurname.value = storage;
-            email.focus();
-        } else {
-            nameSurname.focus();
-        }
         
-        if (storage1) {
-            email.value = storage1;
-            nameSurname.focus();
-        } else {
-            email.focus();
-        }
     });
 
+    buttonBuyInCart.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      menuItemAddedToCart.classList.add("modal-show");
+    });
+
+    if (close) {
+      close.addEventListener("click", function (evt) {
+          evt.preventDefault();
+          popup.classList.remove("modal-show");
+      });
+    }
     mapClose.addEventListener("click", function (evt) {
         evt.preventDefault();
         map.classList.remove("modal-show");
