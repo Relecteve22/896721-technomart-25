@@ -634,106 +634,30 @@
   .equipment {
     background-color: #dc91d8;
   }
-  .slider {
+
+
+
+
+
+  .sliders {
     position: relative;
     width: 620px;
     margin-top: 20px;  
     min-height: 266px; 
-  }
-  .slider-controls {
-    margin: 0;
-    padding: 0;
-  }
-  .slider-controls li {
-    position: absolute;
-    bottom: 36px;
-
-    width: 10px;
-    height: 10px;
-
-    list-style: none;
-  }
-  .slider-control {
-    position: relative;
-
-    display: block;
-    width: 10px;
-    height: 10px;
-    padding: 0;
-    margin: 0;
-
-    border: none;
-    background-color: transparent;  
-  }
-  .first-slider-control {
-    left: 295px;
-  }
-  .second-slider-control {
-    left: 315px;
-  }
-  .slider-controls .slider-control::before {
-    content: "";
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    width: 6px;
-    height: 6px;
-
-    background: #fff;
-    border-radius: 50%;
-    border: 2px solid #fff;
-  }
-  .slider-control-active::after {
-    content: "";
-
-    position: absolute;
-    top: 2px;
-    left: 2px;
-
-    width: 6px;
-    height: 6px;
-
-    background: #ee3643;
-    border-radius: 60%;
-  }
-  .icon-left {
-    position: absolute;
-    left: 25px;
-    top: 114px;
-
-    width: 22px;
-    height: 40px;
-
-    background: none;
-    border: none;
-    background-image: url("../img/icon-left.svg");
-  }
-  .icon-right {
-    position: absolute;
-    right: 20px;
-    top: 114px;
-
-    width: 22px;
-    height: 40px;
-
-    background: none;
-    border: none;
-    background-image: url("../img/icon-right.svg");
-  }
+  }   
   .slider-1 {
+    display: none;
+    width: 620px;
+    min-height: 266px;
+
     background-color: #1a0f0d;
     background-image: url("../img/slider1.jpg");
     background-repeat: no-repeat;
-    width: 620px;
-    min-height: 266px;
-    display: none;
   }
   .slider-2 {
+    display: none;    
     width: 620px;
     height: 266px;
-    margin-top: 20px;
 
     background-color: #1a0f0d;
     background-image: url("../img/slider.jpg");
@@ -742,7 +666,7 @@
   .slider span {
     display: block;
     margin-left: 24px;
-    margin-top: 23px;
+    padding-top: 23px;
 
     font-size: 36px;
     line-height: 36px;
@@ -780,6 +704,74 @@
   }
   .slider a:focus {
     background-color: #ba2732; 
+  }
+  .slider-controls {
+    position: absolute;
+    top: 220px;
+    left: 295px;
+
+    display: flex;
+    justify-content: space-between;
+    width: 30px;
+    height: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  .slider-controls li {
+    width: 10px;
+    height: 10px;
+    
+    border: none;
+    background-color: #fff; 
+    border-radius: 50%; 
+  }
+  .slider-controls label {
+    position: relative;
+
+    display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+  }
+  .icon-left {
+    position: absolute;
+    left: 25px;
+    top: 114px;
+
+    width: 22px;
+    height: 40px;
+
+    background: none;
+    border: none;
+    background-image: url("../img/icon-left.svg");
+  }
+  .icon-right {
+    position: absolute;
+    right: 20px;
+    top: 114px;
+
+    width: 22px;
+    height: 40px;
+
+    background: none;
+    border: none;
+    background-image: url("../img/icon-right.svg");
+  }
+  #product-1:checked ~ #slide1,
+  #product-2:checked ~ #slide2 {
+    display: block;
+  }
+  #product-1:checked ~ .slider-controls label[for="product-1"],
+  #product-2:checked ~ .slider-controls label[for="product-2"] {
+    top: 2px;
+    left: 2px;
+
+    width: 6px;
+    height: 6px;
+
+    background: #ee3643;
+    border-radius: 60%;
   }
   .discount {
     background-color: #8ed78f;
@@ -1004,7 +996,7 @@
     width: 0;
     height: 0;
     
-    border: 19.5px solid white;
+    border: 19px solid white;
     border-left-color: #ee3643;
   }
   .mini-catalog-manufactures li {
@@ -1120,11 +1112,43 @@
 
     background-image: url("../img/shadow.png");
   }
-  .catalog-service button[type="button"] {
+
+
+  .slider-controls li {
+    width: 10px;
+    height: 10px;
+    
+    border: none;
+    background-color: #fff; 
+    border-radius: 50%; 
+  }
+  .slider-controls label {
+    position: relative;
+
     display: block;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    margin: 0;
+  }
+  #service-1:checked ~ #service-slaider-1,
+  #service-2:checked ~ #service-slaider-2,
+  #service-3:checked ~ #service-slaider-3 {
+    display: block;
+  }
+  #service-1:checked ~ ul label[for="service-1"],
+  #service-2:checked ~ ul label[for="service-2"],
+  #service-3:checked ~ ul label[for="service-3"] {
+    color: #32425c;
+
+    background-color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+  }  
+  .catalog-service label {
     width: 240px;    
     margin: 0;
-    padding: 11px 0 15px 23px;
+    padding: 15px 0 15px 23px;
 
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 21px;
@@ -1138,7 +1162,7 @@
     border-top: 1px solid #405069;
     border-bottom: 1px solid #293449;
   }
-  .catalog-service button[type="button"]:hover {
+  .catalog-service label:hover {
     background-color: #293449;
   }
   .service-delivery {
@@ -1175,6 +1199,8 @@
     background-color: #ca2c37;
   }
   .catalog-service li {
+    display: flex;
+
     list-style: none;
   }
   .catalog-service h3 {
@@ -1228,6 +1254,9 @@
     padding: 0;
       
     list-style: none;
+  }
+  .service-delivery {
+    display: none;
   }
   .service-warranty {
     display: none;
@@ -2407,6 +2436,8 @@
     -webkit-box-sizing: border-box;
 
             box-sizing: border-box;
+
+    resize: none;        
   }
   .taxt-post textarea:hover {
     border: solid 2px #788285;
@@ -2553,14 +2584,6 @@
     cursor: pointer;
     background-color: transparent;
     background-image: url("../img/form-close.svg");
-  }
-  .choose-service button[type="button"],
-  .choose-service button[type="button"]:hover {
-    color: #32425c;
-
-    background-color: #fff;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
   }
   .modal-show {
     display: block;
