@@ -1789,21 +1789,11 @@
     border: none;
     margin: 0;
     padding: 0;
-    margin-bottom: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e5e5;
   }
-  .filter fieldset::before {
-    content: "";
-
-    position: absolute;
-    top: -5px;
-
-    width: 220px;
-    height: 1px;
-
-    background-color: #e5e5e5;
-  }
-  .filter fieldset:first-child::before {
-    display: none;
+  .filter fieldset:last-of-type {
+    border: none;
   }
   .filter label {
     font-size: 15px;
@@ -2265,7 +2255,7 @@
     position: fixed;
     z-index: 100000;
     left: 50%;
-    bottom: 200px;
+    top: 120px;
     
     display: none;
     margin-left: -310px;
@@ -2475,7 +2465,7 @@
     position: fixed;
     z-index: 100000;
     left: 50%;
-    bottom: 200px;
+    top: 120px;
     
     margin-left: -470px;
 
@@ -2492,7 +2482,7 @@
     position: fixed;
     z-index: 100000;
     left: 50%;
-    bottom: 200px;
+    top: 120px;
     
     display: none;
     margin-left: -310px;
@@ -2592,6 +2582,9 @@
 
             animation: bounce 0.6s;
   }
+  .modal-error {
+    animation: shake 0.6s;
+  }
   @-webkit-keyframes bounce {
     0% {
       -webkit-transform: translateY(-2000px);
@@ -2613,25 +2606,25 @@
               transform: translateY(0);
     }
   }
-  @keyframes bounce {
-    0% {
-      -webkit-transform: translateY(-2000px);
-              transform: translateY(-2000px);
-    }
-
-    70% {
-      -webkit-transform: translateY(30px);
-              transform: translateY(30px);
-    }
-
-    90% {
-      -webkit-transform: translateY(-10px);
-              transform: translateY(-10px);
-    }
-
+  @keyframes shake {
+    0%,
     100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
+      transform: translateX(0);
+    }
+  
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      transform: translateX(-10px);
+    }
+  
+    20%,
+    40%,
+    60%,
+    80% {
+      transform: translateX(10px);
     }
   }
   /* Илья Филонов, Верстайте пока с pixel-perfect, чтобы научиться это делать, но допускайте % отклонения от макета в тех местах. Я больше про отступы. Размер шрифтов стоит подбирать как в макете. Когда текст в 2 строки - не имеет смысла буква в букву лепить. Можно оставить погрешность. Подумайте что будет если в то место добавить больше текста. */
