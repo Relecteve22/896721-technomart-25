@@ -1,10 +1,14 @@
     var buttonWriteUs = document.querySelector(".button-write-us");
     var buttonMap = document.querySelector(".mini-map");
-    // var ButtonBuy = document.querySelector("[href=buy.html]");
-
     var writeUs = document.querySelector(".write-us");
     var map = document.querySelector(".main-map");
     var menuItemAddedToCart = document.querySelector(".menu-item-added-to-cart");
+    var buttonBuyInCart = document.querySelectorAll(".buy");
+    var basket = document.querySelector(".basket");
+    var quantitItem = document.querySelector(".quantit-item");
+    var buttonInCart = document.querySelectorAll(".in-cart");
+    var bookmarks = document.querySelector(".bookmarks");
+    var quantitItemInBookmarks = document.querySelector(".quantit-item-in-bookmarks");
 
     if (writeUs) {
       var form = writeUs.querySelector("form");
@@ -43,6 +47,7 @@
         writeUs.classList.remove("modal-error");  
       });
     };
+
     if (map) {
       var mapClose = map.querySelector(".leave");
       buttonMap.addEventListener("click", function (evt) {
@@ -65,9 +70,6 @@
       });
     };
 
-    var buttonBuyInCart = document.querySelectorAll(".buy");
-    var basket = document.querySelector(".basket");
-    var quantitItem = document.querySelector(".quantit-item");
     [].forEach.call(buttonBuyInCart, function(btn) {
       btn.addEventListener("click", function (evt) {
       evt.preventDefault();
@@ -77,10 +79,6 @@
       });
       });
 
-
-    var buttonInCart = document.querySelectorAll(".in-cart");
-    var bookmarks = document.querySelector(".bookmarks");
-    var quantitItemInBookmarks = document.querySelector(".quantit-item-in-bookmarks");
       [].forEach.call(buttonInCart, function(btn) {
         btn.addEventListener("click", function (evt) {
         evt.preventDefault();
@@ -88,7 +86,6 @@
         });
         });
   if (menuItemAddedToCart) {
-
     var closeMenuItemAddedToCart = menuItemAddedToCart.querySelector(".leave");
     var continueShopping = menuItemAddedToCart.querySelector(".continue-shopping");
 
