@@ -7,10 +7,6 @@
 
     background-color: #fff;
   }
-  html { 
-    -webkit-box-sizing: border-box; 
-            box-sizing: border-box; 
-  }
   a {
     text-decoration: none;
   } 
@@ -86,7 +82,6 @@
     background-color: #212a3a;
     opacity: 1;
   }
-  /* Сверху костыль) */
   .header-search {
     padding: 0;
     border: none;
@@ -146,12 +141,14 @@
   }
   .main-header-logo:hover {
     background-color: #ca2c37; 
-    box-shadow: 0 5px 0 0 #9a212a;    
+    -webkit-box-shadow: 0 5px 0 0 #9a212a; 
+            box-shadow: 0 5px 0 0 #9a212a;    
   }
   .main-header-logo:active,
   .main-header-logo:focus  {
     background-color: #ba2732; 
-    box-shadow: 0 5px 0 0 #8e1e26;
+    -webkit-box-shadow: 0 5px 0 0 #8e1e26; 
+            box-shadow: 0 5px 0 0 #8e1e26;
   }
   .main-header img {
     margin: auto;
@@ -241,9 +238,15 @@
   .active-cart a:hover {
     background-color: #ee3643;
   }
+  .checkout {
+    max-width: 150px;
+    height: 100%;
+  
+    background-color: #63a63e;
+  }
   .checkout a {
     display: block;
-    padding: 12px 20px;
+    padding: 12px 21px;
 
     background-color: #63a63e;
   }
@@ -316,8 +319,12 @@
     margin-left: auto;
   }
   .bg-for-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;     
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;     
     width: 300px;     
     
     background-color: #fff;  
@@ -489,8 +496,6 @@
   }
   .main-nav {
     min-height: 60px;  
-    padding-left: 22px;
-    padding-right: 22px;
     margin-top: 40px;  
 
     background-color: #32425c;
@@ -498,6 +503,8 @@
   .main-nav ul {
     margin: 0;
     padding: 0;
+    padding-left: 22px;
+    padding-right: 22px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -525,6 +532,8 @@
     background-color:#293449;
   }
   .main-nav a:focus {
+    color: rgba(255, 255, 255, 0.5);
+
     background-color:#1d2739;
   }
   .card {
@@ -710,8 +719,14 @@
     top: 220px;
     left: 295px;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     width: 30px;
     height: 10px;
     margin: 0;
@@ -996,7 +1011,7 @@
     width: 0;
     height: 0;
     
-    border: 19px solid white;
+    border: 18.99px solid white;
     border-left-color: #ee3643;
   }
   .mini-catalog-manufactures li {
@@ -1199,6 +1214,8 @@
     background-color: #ca2c37;
   }
   .catalog-service li {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 
     list-style: none;
@@ -1351,8 +1368,8 @@
     line-height: 24px;
     font-family: "PT Sans", Arial, sans-serif;
   }
-  .about-company p + p {
-    max-width: 386px;
+  .width-for-p {
+    max-width: 400px;
   }
   .company-delivery {
     margin: 0;
@@ -1365,6 +1382,9 @@
     position: relative;
     margin-top: 20px;
     padding-left: 37px;
+  }
+  .company-delivery li:first-of-type {
+    margin-top: 0;
   }
   .company-delivery li::before {
     content: "";
@@ -1396,6 +1416,13 @@
     background-color: #ba2732;
   }
   .contants {    
+    display: -webkit-box;    
+    display: -ms-flexbox;    
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-left: auto;
     width: 300px;
     min-height: 370px;
@@ -1422,10 +1449,7 @@
     line-height: 24px;   
   }
   .contants button[type="button"] {
-    display: block;
-    width: 300px;
-    min-height: 38px; 
-    padding: 10px 60px;
+    padding: 10px 0;
     margin-top: 40px;
 
     font-family: "Cuprum", Arial, sans-serif;
@@ -1478,16 +1502,17 @@
     background-color: #ee3643; 
     -webkit-box-shadow: inset 0 -5px 0 0 #b52933; 
             box-shadow: inset 0 -5px 0 0 #b52933;
-    /* А сдесь лучше как сделать тенью или border-bottom и т.п. ? */
   }
   .footer-logo:hover {
     background-color: #ca2c37; 
-    box-shadow: inset 0 -5px 0 0 #9a212a;
+    -webkit-box-shadow: inset 0 -5px 0 0 #9a212a; 
+            box-shadow: inset 0 -5px 0 0 #9a212a;
   }
   .footer-logo:active,
   .footer-logo:focus  {
     background-color: #ba2732; 
-    box-shadow: 0 5px 0 0 #8e1e26;
+    -webkit-box-shadow: inset 0 -5px 0 0 #8e1e26; 
+            box-shadow: inset 0 -5px 0 0 #8e1e26;
   }
   .top-footer img {
     width: 138px;
@@ -1533,8 +1558,9 @@
     list-style: none;
   }
   .footer-nav a {
-    padding: 21px 30px;
     display: block;
+    margin-left: 60px;
+    margin-top: 35px;
   }
   .footer-nav-bottom li:first-child {
     padding-left: 22px;
@@ -1898,7 +1924,7 @@
 
     cursor: pointer;
   }  
-  .login-checkbox input[type="checkbox"] + .checkbox-indicator {
+  .checkbox-button + .checkbox-indicator {
     position: absolute;
     top: 0;
     left: 0;
@@ -1909,7 +1935,7 @@
     background-image: url("../img/checkbox-off.svg");
     opacity: 0.2;
   }
-  .login-checkbox input[type="checkbox"]:checked + .checkbox-indicator {
+  .checkbox-button:checked + .checkbox-indicator {
     position: absolute;
     top: 0;
     left: 0;
@@ -1920,18 +1946,27 @@
     background-image: url("../img/checkbox-on.svg");
     opacity: 0.2;
   }  
-  .login-checkbox input[type="checkbox"] + .checkbox-indicator:hover {
+  .checkbox-button + .checkbox-indicator:hover {
     opacity: 0.3;
   }
-  .login-checkbox input[type="checkbox"]:checked + .checkbox-indicator:hover  {
+  .checkbox-button:checked + .checkbox-indicator:hover  {
     opacity: 0.3;
   }  
-  .login-checkbox input[type="checkbox"] + .checkbox-indicator:disabled{
+  .checkbox-button + .checkbox-indicator:disabled{
     opacity: 0.1;
   }
-  .login-checkbox input[type="checkbox"]:checked + .checkbox-indicator:disabled  {
+  .checkbox-button:checked + .checkbox-indicator:disabled  {
     opacity: 0.1;
   } 
+  .checkbox-button:focus + .checkbox-indicator {
+    outline: #ff5357 2px solid;
+  }
+  .checkbox-button:disabled + .checkbox-indicator {
+    opacity: 0.1;
+  }
+  .checkbox-button:disabled + .checkbox-indicator + .type-manufactures {
+    opacity: 0.1;
+  }
   .login-radio {
     position: relative;
 
@@ -1966,6 +2001,9 @@
   .radio-button:checked + .radio-indicator:hover  {
     opacity: 0.3;
   }  
+  .radio-button:focus + .radio-indicator {
+    outline: #ff5357 2px solid;
+  }
   .radio-button:disabled + .radio-indicator {
     opacity: 0.1;
   }
@@ -2217,6 +2255,9 @@
     min-height: 260px;
     
     background-color: #f2f6f8;
+  }
+  .about-perforators .container {
+    padding-bottom: 30px;
   }
   .about-perforators h2  {
     padding-top: 65px;
@@ -2583,7 +2624,8 @@
             animation: bounce 0.6s;
   }
   .modal-error {
-    animation: shake 0.6s;
+    -webkit-animation: shake 0.6s;
+            animation: shake 0.6s;
   }
   @-webkit-keyframes bounce {
     0% {
@@ -2606,25 +2648,52 @@
               transform: translateY(0);
     }
   }
-  @keyframes shake {
+  @-webkit-keyframes shake {
     0%,
     100% {
-      transform: translateX(0);
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
     }
-  
+
     10%,
     30%,
     50%,
     70%,
     90% {
-      transform: translateX(-10px);
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
     }
-  
+
     20%,
     40%,
     60%,
     80% {
-      transform: translateX(10px);
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
+    }
+  }
+  @keyframes shake {
+    0%,
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+      -webkit-transform: translateX(-10px);
+              transform: translateX(-10px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+      -webkit-transform: translateX(10px);
+              transform: translateX(10px);
     }
   }
   /* Илья Филонов, Верстайте пока с pixel-perfect, чтобы научиться это делать, но допускайте % отклонения от макета в тех местах. Я больше про отступы. Размер шрифтов стоит подбирать как в макете. Когда текст в 2 строки - не имеет смысла буква в букву лепить. Можно оставить погрешность. Подумайте что будет если в то место добавить больше текста. */
